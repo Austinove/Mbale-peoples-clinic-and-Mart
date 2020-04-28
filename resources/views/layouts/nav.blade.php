@@ -43,15 +43,16 @@
 			<div class="container">
 				<div class="row">
 					<div class="col">
-						<div class="logo_container">
+						<div class="logo_container" style="left: 0px; width: 260px; height: 80px;">
 							<a href="#">
+								{{-- <img src="{{ asset('images/logo.jpg')}}" style="height: 100%"/> --}}
 								<div class="logo_content d-flex flex-column align-items-start justify-content-center">
 									<div class="logo_line"></div>
 									<div class="logo d-flex flex-row align-items-center justify-content-center">
-										<div class="logo_text">Care<span>Med</span></div>
+										<div class="logo_text">Mbale<span>People's</span></div>
 										<div class="logo_box">+</div>
 									</div>
-									<div class="logo_sub">Health Care Center</div>
+									<div class="logo_sub">Clinic and martenat home</div>
 								</div>
 							</a>
 						</div>

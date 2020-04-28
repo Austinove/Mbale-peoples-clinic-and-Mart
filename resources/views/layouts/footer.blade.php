@@ -6,14 +6,14 @@
 					<!-- Footer - About -->
 					<div class="col-lg-4 footer_col">
 						<div class="footer_about">
-							<div class="footer_logo_container">
+							<div class="footer_logo_container" style="width: 80%; height: 90px;">
 								<a href="#" class="d-flex flex-column align-items-center justify-content-center">
 									<div class="logo_content">
 										<div class="logo d-flex flex-row align-items-center justify-content-center">
-											<div class="logo_text">Care<span>Med</span></div>
+											<div class="logo_text">Mbale<span>People's</span></div>
 											<div class="logo_box">+</div>
 										</div>
-										<div class="logo_sub">Health Care Center</div>
+										<div class="logo_sub">Clinic and Martenate home</div>
 									</div>
 								</a>
 							</div>
