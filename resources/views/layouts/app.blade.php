@@ -22,10 +22,10 @@
     <link rel="stylesheet" href="{{ asset('plugins/OwlCarousel2-2.2.1/owl.carousel.css')}}">
     <link rel="stylesheet" href="{{ asset('plugins/OwlCarousel2-2.2.1/owl.theme.default.css')}}">
     <link rel="stylesheet" href="{{ asset('plugins/OwlCarousel2-2.2.1/animate.css')}}">
-    {{-- <link rel="stylesheet" href="{{ asset('styles/about.css')}}"> --}}
-    <link rel="stylesheet" href="{{ asset('styles/about_responsive.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('styles/main_styles.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('styles/responsive.css')}}">
+
+    {{-- Dynamic stylesheets --}}
+    @stack('custom-styles')
+
 </head>
 <body>
     <div class="super_container" id="app">

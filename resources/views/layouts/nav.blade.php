@@ -24,11 +24,11 @@
 						<div class="header_content d-flex flex-row align-items-center justify-content-start">
 							<nav class="main_nav ml-auto">
 								<ul>
-									<li><a href="index.html">Home</a></li>
-									<li><a href="about.html">About us</a></li>
-									<li><a href="services.html">Services</a></li>
-									<li><a href="news.html">News</a></li>
-									<li><a href="contact.html">Contact</a></li>
+									<li><a href="{{ url('/') }}">Home</a></li>
+									<li><a href="{{ url('/aboutus') }}">About us</a></li>
+									<li><a href="{{ url('/services') }}">Services</a></li>
+									<li><a href="{{ url('/news') }}">News</a></li>
+									<li><a href="{{ url('/contactus') }}">Contact</a></li>
 								</ul>
 							</nav>
 							<div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
