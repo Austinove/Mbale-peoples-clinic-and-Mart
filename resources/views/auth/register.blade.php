@@ -1,8 +1,13 @@
 @extends('layouts.app')
 
+@push('custom-styles')
+	<link rel="stylesheet" type="text/css" href="{{ asset('styles/main_styles.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('styles/responsive.css')}}">
+@endpush
+
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center" style="margin-top: 15%; margin-bottom: 5%;">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Register') }}</div>

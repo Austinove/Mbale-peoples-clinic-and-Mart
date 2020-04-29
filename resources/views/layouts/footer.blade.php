@@ -4,82 +4,58 @@
 				<div class="row">
 					
 					<!-- Footer - About -->
-					<div class="col-lg-4 footer_col">
-						<div class="footer_about">
-							<div class="footer_logo_container" style="width: 80%; height: 90px;">
-								<a href="#" class="d-flex flex-column align-items-center justify-content-center">
-									<div class="logo_content">
-										<div class="logo d-flex flex-row align-items-center justify-content-center">
-											<div class="logo_text">Mbale<span>People's</span></div>
-											<div class="logo_box">+</div>
-										</div>
-										<div class="logo_sub">Clinic and Martenate home</div>
-									</div>
-								</a>
-							</div>
+					<div class="col-md-4">
 							<div class="footer_about_text">
-								<p>Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. Curabitur ante leo, finibus quis est ut, tempor tincidunt ipsum.</p>
+								<h3>Mbale people's Clinic and Martenate Home</h3>
+								<p>You can contact us by using the information below</p>
+								<ul class="footer_about_list">
+									<li><div class="footer_about_icon"><img src="images/phone-call.svg" alt=""></div><span>+45 677 8993000 223</span></li>
+									<li><div class="footer_about_icon"><img src="images/envelope.svg" alt=""></div><span>office@template.com</span></li>
+									<li><div class="footer_about_icon"><img src="images/placeholder.svg" alt=""></div><span>Main Str. no 45-46, b3, 56832, Los Angeles, CA</span></li>
+								</ul>
 							</div>
-							<ul class="footer_about_list">
-								<li><div class="footer_about_icon"><img src="images/phone-call.svg" alt=""></div><span>+45 677 8993000 223</span></li>
-								<li><div class="footer_about_icon"><img src="images/envelope.svg" alt=""></div><span>office@template.com</span></li>
-								<li><div class="footer_about_icon"><img src="images/placeholder.svg" alt=""></div><span>Main Str. no 45-46, b3, 56832, Los Angeles, CA</span></li>
-							</ul>
-						</div>
+						{{-- </div> --}}
 					</div>
 
 					<!-- Footer - Links -->
-					<div class="col-lg-4 footer_col">
-						<div class="footer_links footer_column">
-							<div class="footer_title">Useful Links</div>
+					<div class="col-md-4">
+						<div class="footer_links footer_column" style="padding-top: 0px">
+							<div class="footer_about_text">
+								<h4>Useful Links</h4>
+							</div>
 							<ul>
-								<li><a href="#">Testimonials</a></li>
 								<li><a href="#">FAQ</a></li>
 								<li><a href="#">Apply for a Job</a></li>
 								<li><a href="#">Terms & Conditions</a></li>
 								<li><a href="#">Our Partners</a></li>
-								<li><a href="#">Services</a></li>
 								<li><a href="#">Free services</a></li>
-								<li><a href="#">About us</a></li>
-								<li><a href="#">News</a></li>
-								<li><a href="#">Contact</a></li>
-								<li><a href="#">Our Screening Program</a></li>
-								<li><a href="#">FAQ</a></li>
+								<li><a href="#">Testimonials</a></li>
 							</ul>
 						</div>
 					</div>
-
-					<!-- Footer - News -->
-					<div class="col-lg-4 footer_col">
-						<div class="footer_news footer_column">
-							<div class="footer_title">Useful Links</div>
-							<ul>
-								<li>
-									<div class="footer_news_title"><a href="news.html">Aliquam ac eleifend metus</a></div>
-									<div class="footer_news_date">March 10, 2018</div>
-								</li>
-								<li>
-									<div class="footer_news_title"><a href="news.html">Donec in libero sit amet mi vulputate</a></div>
-									<div class="footer_news_date">March 10, 2018</div>
-								</li>
-								<li>
-									<div class="footer_news_title"><a href="news.html">Aliquam ac eleifend metus</a></div>
-									<div class="footer_news_date">March 10, 2018</div>
-								</li>
-							</ul>
+					<div class="col-md-4">
+						<div class="footer_about_text">
+							<h4>Map</h4>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		{{-- <div class="container">
+		<div class="row">
+			<div class="col-sm-12 col-md-4">col-sm-8</div>
+			<div class="col-sm-12 col-md-4">col-sm-4</div>
+			<div class="col-sm-12 col-md-4">col-sm-4</div>
+		</div>
+		</div> --}}
 		<div class="copyright">
 			<div class="container">
 				<div class="row">
 					<div class="col">
 						<div class="copyright_content d-flex flex-lg-row flex-column align-items-lg-center justify-content-start">
-							<div class="cr"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+							<div class="cr">
+                                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Developed<i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/Austinove" target="_blank">AusDev</a>
+                            </div>
 							<div class="footer_social ml-lg-auto">
 								<ul>
 									<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>

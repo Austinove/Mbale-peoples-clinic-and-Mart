@@ -29,6 +29,31 @@
 									<li><a href="{{ url('/services') }}">Services</a></li>
 									<li><a href="{{ url('/news') }}">News</a></li>
 									<li><a href="{{ url('/contactus') }}">Contact</a></li>
+									<li class="nav-item dropdown">
+										<a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+											Administrator <span class="caret"></span>
+										</a>
+
+										<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+											<a class="dropdown-item" href="#">Slides</a>
+											<a class="dropdown-item" href="#">News</a>
+											<a class="dropdown-item" href="#">Staff</a>
+											<a class="dropdown-item" href="#">Services</a>
+											<div class="dropdown-divider"></div>
+											<a class="dropdown-item" href="#">Profile</a>
+											<div class="dropdown-divider"></div>
+											<a class="dropdown-item" href="{{ route('logout') }}"
+											onclick="event.preventDefault();
+															document.getElementById('logout-form').submit();">
+												{{ __('Logout') }}
+											</a>
+
+											<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+												@csrf
+											</form>
+										</div>
+									</li>
+								</li>
 								</ul>
 							</nav>
 							<div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
@@ -45,7 +70,6 @@
 					<div class="col">
 						<div class="logo_container" style="left: 0px; width: 260px; height: 80px;">
 							<a href="#">
-								{{-- <img src="{{ asset('images/logo.jpg')}}" style="height: 100%"/> --}}
 								<div class="logo_content d-flex flex-column align-items-start justify-content-center">
 									<div class="logo_line"></div>
 									<div class="logo d-flex flex-row align-items-center justify-content-center">

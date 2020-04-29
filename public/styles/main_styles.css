@@ -360,7 +360,8 @@ section
 .header_container
 {
 	width: 100%;
-	background: #FFFFFF;
+	background : #f5f3f3;
+
 }
 .header_content
 {
@@ -834,7 +835,7 @@ section
 .about
 {
 	width: 100%;
-	background: #FFFFFF;
+	background: #f5f3f3;
 	padding-top: 92px;
 	padding-bottom: 92px;
 }
@@ -956,7 +957,7 @@ section
 .services
 {
 	width: 100%;
-	background: #FFFFFF;
+	background: #f5f3f3;
 	padding-top: 95px;
 	padding-bottom: 65px;
 }
