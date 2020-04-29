@@ -46,16 +46,14 @@
                     {{-- style="background-image: url(images/person_1.jpg)" --}}
 					<div class="home_content">
 						<div class="container">
-							<div class="row">
+							<div class="row justify-content-md-center">
 								<div class="col">
 									<div class="home_content_inner">
 										<div class="home_title"><h1>Medicine made rgreterterter care one</h1></div>
 										<div class="home_text">
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestibulum mauris quis aliquam. Integer accumsan sodales odio, id tempus velit ullamcorper id. Quisque at erat eu.</p>
 										</div>
-										<div class="button home_button">
-											<a href="#">read more</a>
-										</div>
+											<div class="button btn-slide cta_button"><a href="#">request for a health plan</a></div>
 									</div>
 								</div>
 							</div>
@@ -75,9 +73,7 @@
 										<div class="home_text">
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestibulum mauris quis aliquam. Integer accumsan sodales odio, id tempus velit ullamcorper id. Quisque at erat eu.</p>
 										</div>
-										<div class="button home_button">
-											<a href="#">read more</a>
-										</div>
+											<div class="button btn-slide cta_button"><a href="#">request for a health plan</a></div>
 									</div>
 								</div>
 							</div>
@@ -97,9 +93,7 @@
 										<div class="home_text">
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestibulum mauris quis aliquam. Integer accumsan sodales odio, id tempus velit ullamcorper id. Quisque at erat eu.</p>
 										</div>
-										<div class="button home_button">
-											<a href="#">read more</a>
-										</div>
+											<div class="button btn-slide cta_button"><a href="#">request for a health plan</a></div>
 									</div>
 								</div>
 							</div>
@@ -188,7 +182,7 @@
 
 				<!-- About Image -->
 				<div class="col-lg-5">
-					<div class="about_image"><img src="images/about.png" alt=""></div>
+					<div class="about_image"><img height="auto" src="images/about.png" alt=""></div>
 				</div>
 			</div>
 		</div>
@@ -346,7 +340,7 @@
 
 	<!-- Call to action -->
 
-	<div class="cta">
+	{{-- <div class="cta">
 		<div class="cta_background parallax-window" data-parallax="scroll" data-image-src="images/cta.jpg" data-speed="0.8"></div>
 		<div class="container">
 			<div class="row">
@@ -359,6 +353,6 @@
 				</div>
 			</div>
 		</div>		
-	</div>
+	</div> --}}
 
 @endsection

@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="{{ asset('plugins/OwlCarousel2-2.2.1/owl.carousel.css')}}">
     <link rel="stylesheet" href="{{ asset('plugins/OwlCarousel2-2.2.1/owl.theme.default.css')}}">
     <link rel="stylesheet" href="{{ asset('plugins/OwlCarousel2-2.2.1/animate.css')}}">
+    <link rel="stylesheet" href="{{ asset('styles/custom.css')}}">
 
     {{-- Dynamic stylesheets --}}
     @stack('custom-styles')
@@ -80,6 +81,7 @@
             </div>
         </nav> --}}
         @include('layouts.nav')
+        @include('layouts.modals')
         @yield('content')
         @include('layouts.footer')
     </div>

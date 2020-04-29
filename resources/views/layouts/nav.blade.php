@@ -7,7 +7,7 @@
 					<div class="col">
 						<div class="top_bar_content d-flex flex-row align-items-center justify-content-start">
 							<div class="top_bar_item"><a href="#">FAQ</a></div>
-							<div class="top_bar_item"><a href="#">Request an Appointment</a></div>
+							<div class="top_bar_item"><a data-toggle="modal" data-target="#appointment" href="#">Request an Appointment</a></div>
 							<div class="emergencies  d-flex flex-row align-items-center justify-content-start ml-auto">For Emergencies: +563 47558 623</div>
 						</div>
 
@@ -35,12 +35,11 @@
 										</a>
 
 										<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-											<a class="dropdown-item" href="#"><i class="fa fa-slideshare"></i> Slides</a>
-											<a class="dropdown-item" href="#"><i class="fa fa-newspaper-o"></i> News</a>
-											<a class="dropdown-item" href="#"><i class="fa fa-users"></i> Staff</a>
-											<a class="dropdown-item" href="#"><i class="fa fa-clone"></i> Services</a>
+											<a class="dropdown-item" data-toggle="modal" data-target="#slides" href="#"><i class="fa fa-slideshare"></i> Slides</a>
+											<a class="dropdown-item" data-toggle="modal" data-target="#news" href="#"><i class="fa fa-newspaper-o"></i> News</a>
+											<a class="dropdown-item" data-toggle="modal" data-target="#staff" href="#"><i class="fa fa-users"></i> Staff</a>
 											<div class="dropdown-divider"></div>
-											<a class="dropdown-item" href="#"><i class="fa fa-user-o"></i> Profile</a>
+											<a class="dropdown-item" data-toggle="modal" data-target="#profile" href="#"><i class="fa fa-user-o"></i> Profile</a>
 											<div class="dropdown-divider"></div>
 											<a class="dropdown-item" href="{{ route('logout') }}"
 											onclick="event.preventDefault();
@@ -68,7 +67,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col">
-						<div class="logo_container" style="left: 0px; width: 260px; height: 80px;">
+						<div class="logo_container">
 							<a href="#">
 								<div class="logo_content d-flex flex-column align-items-start justify-content-center">
 									<div class="logo_line"></div>
@@ -86,3 +85,4 @@
 		</div>
 
 	</header>
+

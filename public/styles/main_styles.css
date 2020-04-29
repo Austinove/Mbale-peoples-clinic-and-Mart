@@ -45,7 +45,7 @@
 body
 {
 	font-family: 'Roboto', sans-serif;
-	font-size: 15px;
+	font-size: 12px;
 	font-weight: 500;
 	background: #FFFFFF;
 	color: #696969;
@@ -66,10 +66,10 @@ ul
 p
 {
 	font-family: 'Roboto', sans-serif;
-	font-size: 15px;
+	font-size: 12px;
 	line-height: 2;
 	font-weight: 500;
-	color: #696969;
+	color: #350d36;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
 	text-shadow: rgba(0,0,0,.01) 0 0 1px;
@@ -223,7 +223,7 @@ section
 {
 	display: inline-block;
 	height: 51px;
-	background: #283290;
+	background: rgb(82,38,83);
 }
 .button::after
 {
@@ -270,9 +270,9 @@ section
 }
 .section_title h2
 {
-	font-size: 30px;
+	font-size: 20px;
 	font-weight: 500;
-	color: #232323;
+	color: #350d36;
 }
 .section_title::before
 {
@@ -316,7 +316,7 @@ section
 .top_bar
 {
 	width: 100%;
-	background: #283290;
+	background: #350d36;
 }
 .top_bar_content
 {
@@ -330,7 +330,7 @@ section
 }
 .top_bar_item a
 {
-	font-size: 14px;
+	font-size: 12px;
 	color: #FFFFFF;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
@@ -360,6 +360,7 @@ section
 .header_container
 {
 	width: 100%;
+	height: 75px;
 	background : #f5f3f3;
 
 }
@@ -382,8 +383,8 @@ section
 }
 .main_nav ul li a
 {
-	font-size: 16px;
-	font-weight: 500;
+	font-size: 13px;
+	font-weight: normal;
 	color: #323232;
 }
 .hamburger
@@ -413,8 +414,8 @@ section
 	position: absolute;
 	top: 0;
 	left: 15px;
-	width: 216px;
-	height: 177px;
+	width: 220px;
+	height: 60px;
 	background: #FFFFFF;
 	box-shadow: 0px 31px 29px rgba(0,0,0,0.09);
 	z-index: 10;
@@ -427,7 +428,7 @@ section
 .header.scrolled .logo_container
 {
 	top: 48px;
-	height: 120px;
+	height: 80px;
 }
 .logo_container a
 {
@@ -440,7 +441,7 @@ section
 {
 	width: 100%;
 	height: 100%;
-	padding-left: 36px;
+	padding-left: 20px;
 }
 .logo_line
 {
@@ -449,11 +450,10 @@ section
 	bottom: 0;
 	width: 100%;
 	height: 4px;
-	background: #20d34a;
 }
 .logo
 {
-	margin-top: 27px;
+	margin-top: 0px;
 }
 .logo span
 {
@@ -465,9 +465,9 @@ section
 }
 .logo_text
 {
-	font-size: 30px;
+	font-size: 20px;
 	font-weight: 500;
-	color: #283290;
+	color: #350d36;
 	line-height: 0.75;
 }
 .logo_box
@@ -684,7 +684,7 @@ section
 .home_content
 {
 	position: absolute;
-	top: 39.8%;
+	top: 50%;
 	left: 0;
 	width: 100%;
 }
@@ -694,10 +694,9 @@ section
 }
 .home_title h1
 {
-	font-size: 69.24px;
-	font-weight: 900;
-	color: #272727;
-	line-height: 1.0398;
+	font-size: 20px;
+	font-weight: bold;
+	color: #350d36;
 }
 .home_text
 {
@@ -707,9 +706,9 @@ section
 }
 .home_text p
 {
-	font-size: 16px;
-	font-weight: 500;
-	color: #747474;
+	font-size: 13px;
+	font-weight: normal;
+	color: #350d36;
 	line-height: 1.75;
 }
 .home_button
@@ -737,7 +736,7 @@ section
 {
 	width: 100%;
 	height: 287px;
-	background: #283290;
+	background: rgb(99, 16, 101);
 	padding-left: 42px;
 	padding-top: 29px;
 	-webkit-transition: all 200ms ease;
@@ -763,8 +762,8 @@ section
 }
 .box_title
 {
-	font-size: 20px;
-	font-weight: 500;
+	font-size: 14px;
+	font-weight: bold;
 	color: #FFFFFF;
 	margin-top: 11px;
 }
@@ -781,7 +780,7 @@ section
 {
 	font-size: 14px;
 	font-weight: 400;
-	color: #FFFFFF;
+	color: rgb(188,171,188);
 }
 .working_hours_list ul li:not(:last-child)
 {
@@ -800,14 +799,14 @@ section
 {
 	font-size: 14px;
 	line-height: 2.14;
-	color: #FFFFFF;
+	color: rgb(188,171,188);
 	font-weight: 400;
 	margin-top: 23px;
 }
 .box_phone
 {
-	font-size: 30px;
-	font-weight: 400;
+	font-size: 20px;
+	font-weight: bold;
 	color: #20d34a;
 	margin-top: 20px;
 }
@@ -823,7 +822,7 @@ section
 {
 	font-size: 14px;
 	line-height: 2.14;
-	color: #FFFFFF;
+	color: rgb(188,171,188);
 	font-weight: 400;
 	margin-top: 18px;
 }
@@ -841,7 +840,7 @@ section
 }
 .about_text
 {
-	margin-top: 34px;
+	margin-top: 30px;
 }
 .about_button
 {
@@ -865,9 +864,9 @@ section
 .departments
 {
 	width: 100%;
-	background: transparent;
-	padding-top: 75px;
-	padding-bottom: 65px;	
+	background: rgb(99, 16, 101);
+	padding-top: 35px;
+	padding-bottom: 35px;	
 }
 .departments_background
 {
@@ -879,7 +878,7 @@ section
 }
 .departments_row
 {
-	margin-top: 79px;
+	margin-top: 35px;
 }
 .dept_col
 {
@@ -917,16 +916,16 @@ section
 }
 .dept_title
 {
-	font-size: 15px;
+	font-size: 14px;
 	font-weight: 700;
 	text-transform: uppercase;
-	color: #232323;
+	color: #350d36;
 }
 .dept_subtitle
 {
 	font-size: 14px;
 	font-weight: 400;
-	color: #696969;
+	color: #8c578d;
 	margin-top: 5px;
 }
 .dept_text p
@@ -947,7 +946,7 @@ section
 }
 .dept_button a
 {
-	color: #272727;
+	color: #350d36;
 }
 
 /*********************************
@@ -980,7 +979,7 @@ section
 }
 .service:hover
 {
-	background: #283290;
+	background: #631065;
 }
 .service::after
 {
@@ -1137,7 +1136,8 @@ section
 .footer_container
 {
 	width: 100%;
-	background: #060b3a;
+background : rgb(53, 13, 54);
+
 	padding-bottom: 77px;
 }
 .footer_logo_container

@@ -110,7 +110,7 @@
 								<div class="news_link"><a href="#">Read More</a></div>
 							</div>
 						</div>
-
+						
 					</div>
 					<div class="news_page_nav">
 						<ul>
@@ -120,6 +120,8 @@
 						</ul>
 					</div>
 				</div>
+
+				
 
 				<!-- Sidebar -->
 				<div class="col-lg-4">
@@ -193,6 +195,7 @@
 				</div>
 			</div>
 		</div>
+		
 	</div>
 
 

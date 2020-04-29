@@ -1,0 +1,16 @@
+.form-group > .form-custom{
+    font-size: 14px;
+}
+.footer_about_text > h3, h4 {
+    color: white;
+}
+.home_content_inner> .btn-slide {
+    height: 40px;
+}
+.home_content_inner > .btn-slide > a {
+    line-height: 35px;
+    font-size: 12px;
+    font-weight: 500;
+    padding-left: 10px;
+    padding-right: 10px;
+}
