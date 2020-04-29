@@ -359,7 +359,7 @@ section
 .header_container
 {
 	width: 100%;
-	background: #FFFFFF;
+	background: #f5f3f3;
 }
 .header_content
 {
@@ -709,7 +709,7 @@ section
 .services
 {
 	width: 100%;
-	background: #FFFFFF;
+	background: #f5f3f3;
 	padding-top: 95px;
 	padding-bottom: 65px;
 }
@@ -895,7 +895,7 @@ section
 .text_section
 {
 	width: 100%;
-	background: #FFFFFF;
+	background: #f5f3f3;
 	padding-top: 95px;
 	padding-bottom: 94px;
 }

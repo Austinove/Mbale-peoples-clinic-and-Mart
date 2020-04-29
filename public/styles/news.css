@@ -357,7 +357,7 @@ section
 .header_container
 {
 	width: 100%;
-	background: #FFFFFF;
+	background: #f5f3f3;
 }
 .header_content
 {
@@ -707,7 +707,7 @@ section
 .news
 {
 	width: 100%;
-	background: #FFFFFF;
+	background: #f5f3f3;
 	padding-top: 94px;
 	padding-bottom: 91px;
 }
@@ -877,6 +877,7 @@ section
 {
 	width: 100%;
 	background: #FFFFFF;
+	padding: 10px;
 }
 .search_input
 {

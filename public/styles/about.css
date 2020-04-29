@@ -359,7 +359,7 @@ section
 .header_container
 {
 	width: 100%;
-	background: #FFFFFF;
+	background: #f5f3f3;
 }
 .header_content
 {
@@ -709,7 +709,7 @@ section
 .about
 {
 	width: 100%;
-	background: #FFFFFF;
+	background: #f5f3f3;
 	padding-top: 96px;
 	padding-bottom: 94px;
 }
@@ -926,7 +926,7 @@ section
 .team
 {
 	width: 100%;
-	background: #FFFFFF;
+	background: #f5f3f3;
 	padding-top: 95px;
 	padding-bottom: 89px;
 }

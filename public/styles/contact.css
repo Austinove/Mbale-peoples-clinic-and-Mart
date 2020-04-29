@@ -356,7 +356,7 @@ section
 .header_container
 {
 	width: 100%;
-	background: #FFFFFF;
+	background: #f5f3f3;
 }
 .header_content
 {
@@ -706,7 +706,7 @@ section
 .contact
 {
 	width: 100%;
-	background: #FFFFFF;
+	background: #f5f3f3;
 	padding-top: 95px;
 	padding-bottom: 95px;
 }

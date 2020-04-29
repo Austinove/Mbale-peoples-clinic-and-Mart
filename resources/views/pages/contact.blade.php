@@ -64,49 +64,6 @@
 					</div>
 				</div>
 			</div>
-			<div class="row map_row">
-				<div class="col">
-
-					<!-- Contact Map -->
-
-					<div class="contact_map">
-
-						<!-- Google Map -->
-						
-						<div class="map">
-							<div id="google_map" class="google_map">
-								<div class="map_container">
-									<div id="map"></div>
-								</div>
-							</div>
-						</div>
-
-						<!-- Working Hours -->
-						<div class="box working_hours">
-							<div class="box_icon d-flex flex-column align-items-start justify-content-center"><div style="width:29px; height:29px;"><img src="images/alarm-clock.svg" alt=""></div></div>
-							<div class="box_title">Working Hours</div>
-							<div class="working_hours_list">
-								<ul>
-									<li class="d-flex flex-row align-items-center justify-content-start">
-										<div>Monday – Friday</div>
-										<div class="ml-auto">8.00 – 19.00</div>
-									</li>
-									<li class="d-flex flex-row align-items-center justify-content-start">
-										<div>Saturday</div>
-										<div class="ml-auto">9.30 – 17.00</div>
-									</li>
-									<li class="d-flex flex-row align-items-center justify-content-start">
-										<div>Sunday</div>
-										<div class="ml-auto">9.30 – 15.00</div>
-									</li>
-								</ul>
-							</div>
-						</div>
-
-					</div>
-
-				</div>
-			</div>
 		</div>
 	</div>
 
