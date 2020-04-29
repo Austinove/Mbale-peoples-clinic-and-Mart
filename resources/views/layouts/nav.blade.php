@@ -35,17 +35,17 @@
 										</a>
 
 										<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-											<a class="dropdown-item" href="#">Slides</a>
-											<a class="dropdown-item" href="#">News</a>
-											<a class="dropdown-item" href="#">Staff</a>
-											<a class="dropdown-item" href="#">Services</a>
+											<a class="dropdown-item" href="#"><i class="fa fa-slideshare"></i> Slides</a>
+											<a class="dropdown-item" href="#"><i class="fa fa-newspaper-o"></i> News</a>
+											<a class="dropdown-item" href="#"><i class="fa fa-users"></i> Staff</a>
+											<a class="dropdown-item" href="#"><i class="fa fa-clone"></i> Services</a>
 											<div class="dropdown-divider"></div>
-											<a class="dropdown-item" href="#">Profile</a>
+											<a class="dropdown-item" href="#"><i class="fa fa-user-o"></i> Profile</a>
 											<div class="dropdown-divider"></div>
 											<a class="dropdown-item" href="{{ route('logout') }}"
 											onclick="event.preventDefault();
 															document.getElementById('logout-form').submit();">
-												{{ __('Logout') }}
+												{{ __('Logout') }} <i class="fa fa-sign-out"></i>
 											</a>
 
 											<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -56,7 +56,7 @@
 								</li>
 								</ul>
 							</nav>
-							<div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
+							<div class="hamburger ml-auto"><i class="fa fa-bars"></i></div>
 						</div>
 					</div>
 				</div>
