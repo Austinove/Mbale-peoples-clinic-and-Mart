@@ -97,23 +97,6 @@
 	{
 		display: none;
 	}
-	.logo_container
-	{
-		width: 181px;
-	}
-	.logo_content
-	{
-		padding-left: 28px;
-	}
-	.logo_text
-	{
-		font-size: 24px;
-	}
-	.logo_sub
-	{
-		font-size: 12px;
-		font-weight: 400;
-	}
 	.top_bar_content
 	{
 		padding-left: 166px;
@@ -131,18 +114,6 @@
 		font-size: 12px;
 		padding-left: 30px;
 		padding-right: 30px;
-	}
-	.logo_box
-	{
-		width: 18px;
-		height: 18px;
-		line-height: 18px;
-		font-size: 18px;
-		-webkit-transform: translateY(-1px);
-		-moz-transform: translateY(-1px);
-		-ms-transform: translateY(-1px);
-		-o-transform: translateY(-1px);
-		transform: translateY(-1px);
 	}
 	.hamburger
 	{
@@ -212,14 +183,6 @@
 	{
 		display: none;
 	}
-	.logo_container
-	{
-		height: 127px;
-	}
-	.logo
-	{
-		margin-top: 9px;
-	}
 }
 
 /************
@@ -241,58 +204,7 @@
 	{
 		height: 60px;
 	}
-	.header.scrolled .logo_container
-	{
-		top: 0;
-	}
-	.header.scrolled .logo_container
-	{
-		height: 77px;
-	}
 	.hamburger i
-	{
-		font-size: 20px;
-	}
-	.logo_container
-	{
-		width: 141px;
-		height: 77px;
-	}
-	.logo_content
-	{
-		padding-left: 20px;
-	}
-	.logo_text
-	{
-		font-size: 16px;
-	}
-	.logo_box
-	{
-		width: 12px;
-		height: 12px;
-		line-height: 12px;
-		font-size: 12px;
-	}
-	.logo_sub
-	{
-		font-size: 10px;
-		padding-left: 1px;
-	}
-	.menu
-	{
-		top: 90px;
-	}
-	.menu_close_container
-	{
-		top: 20px;
-		right: 20px;
-	}
-	.menu_container
-	{
-		width: 100vw;
-		right: -100vw;
-	}
-	.menu_item a
 	{
 		font-size: 20px;
 	}

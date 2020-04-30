@@ -52,7 +52,6 @@
 											</form>
 										</div>
 									</li>
-								</li>
 								</ul>
 							</nav>
 							<div class="hamburger ml-auto"><i class="fa fa-bars"></i></div>
@@ -83,6 +82,56 @@
 				</div>
 			</div>	
 		</div>
-
 	</header>
+
+	<div class="menu_container menu_mm">
+
+		<!-- Menu Close Button -->
+		<div class="menu_close_container">
+			<div class="menu_close"></div>
+		</div>
+
+		<!-- Menu Items -->
+		<div class="menu_inner menu_mm">
+			<div class="menu menu_mm">
+				<ul class="menu_list menu_mm">
+					<li class="menu_item menu_mm"><a href="{{ url('/') }}">Home</a></li>
+					<li class="menu_item menu_mm"><a href="{{ url('/aboutus') }}">About us</a></li>
+					<li class="menu_item menu_mm"><a href="{{ url('/services') }}">Services</a></li>
+					<li class="menu_item menu_mm"><a href="{{ url('/news') }}">News</a></li>
+					<li class="menu_item menu_mm"><a href="{{ url('/contactus') }}">Contact</a></li>
+					<li class="nav-item dropdown menu_item menu_mm">
+						<a id="navbarDropdown" style="padding: 0px" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+							Administrator <span class="caret"></span>
+						</a>
+
+						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" data-toggle="modal" data-target="#slides" href="#"><i class="fa fa-slideshare"></i> Slides</a>
+							<a class="dropdown-item" data-toggle="modal" data-target="#news" href="#"><i class="fa fa-newspaper-o"></i> News</a>
+							<a class="dropdown-item" data-toggle="modal" data-target="#staff" href="#"><i class="fa fa-users"></i> Staff</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" data-toggle="modal" data-target="#profile" href="#"><i class="fa fa-user-o"></i> Profile</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="{{ route('logout') }}"
+							onclick="event.preventDefault();
+											document.getElementById('logout-form').submit();">
+								{{ __('Logout') }} <i class="fa fa-sign-out"></i>
+							</a>
+
+							<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+								@csrf
+							</form>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="menu_extra">
+				<div class="menu_appointment"><a href="#">Request an Appointment</a></div>
+				<div class="menu_emergencies">For Emergencies: +563 47558 623</div>
+			</div>
+
+		</div>
+
+	</div>
+	
 

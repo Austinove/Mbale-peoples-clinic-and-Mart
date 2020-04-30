@@ -103,11 +103,11 @@
 	}
 	.logo_container
 	{
-		width: 181px;
+		width: 190px;
 	}
 	.logo_content
 	{
-		padding-left: 28px;
+		padding-left: 10px;
 	}
 	.logo_text
 	{
@@ -154,7 +154,7 @@
 	}
 	.home_title h1
 	{
-		font-size: 56px;
+		font-size: 20px;
 	}
 	.boxes
 	{
@@ -238,7 +238,7 @@
 	}
 	.logo_container
 	{
-		height: 127px;
+		height: 80px;
 	}
 	.logo
 	{
@@ -321,7 +321,7 @@
 	}
 	.menu
 	{
-		top: 90px;
+		top: 40px;
 	}
 	.menu_close_container
 	{
@@ -343,7 +343,7 @@
 	}
 	.home_title h1
 	{
-		font-size: 36px;
+		font-size: 20px;
 	}
 	.home_text p
 	{
@@ -351,12 +351,12 @@
 	}
 	.menu_container
 	{
-		width: 100vw;
+		width: 35vw;
 		right: -100vw;
 	}
 	.menu_item a
 	{
-		font-size: 20px;
+		font-size: 13px;
 	}
 	.section_title h2
 	{
@@ -413,7 +413,7 @@
 {
 	.home_title h1
 	{
-		font-size: 28px;
+		font-size: 20px;
 	}
 }
 
