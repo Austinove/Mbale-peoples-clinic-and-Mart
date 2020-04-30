@@ -148,6 +148,14 @@
 		-o-transform: translateY(-1px);
 		transform: translateY(-1px);
 	}
+	.form_col
+	{
+		margin-top: 95px;
+	}
+	.input_name
+	{
+		margin-bottom: 28px;
+	}
 	.hamburger
 	{
 		display: block;

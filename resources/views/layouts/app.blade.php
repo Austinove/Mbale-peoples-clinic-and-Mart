@@ -85,7 +85,7 @@
         @include('layouts.nav')
         @include('layouts.modals')
         @yield('content')
-        {{-- @include('layouts.footer') --}}
+        @include('layouts.footer')
     </div>
     <script src="{{ asset('js/jquery-3.2.1.min.js')}}"></script>
     <script src="{{ asset('styles/bootstrap4/popper.js')}}"></script>
