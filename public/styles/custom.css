@@ -39,3 +39,6 @@
 .btn-icon:hover{
     cursor: pointer;
 }
+.white_color{
+    color: white !important;
+}
