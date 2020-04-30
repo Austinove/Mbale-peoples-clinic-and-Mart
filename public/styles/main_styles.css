@@ -345,7 +345,7 @@ section
 .emergencies
 {
 	height: 100%;
-	background: #ff0030;
+	background: #20d34a !important;
 	color: #FFFFFF;
 	font-size: 14px;
 	font-weight: 700;
