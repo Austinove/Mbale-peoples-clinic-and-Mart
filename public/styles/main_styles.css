@@ -654,6 +654,9 @@ section
 	width: 100%;
 	height: 900px;
 }
+.custom_home{
+	height: 400px;
+}
 .home_slider_container
 {
 	width: 100%;
@@ -688,9 +691,24 @@ section
 	left: 0;
 	width: 100%;
 }
+.custom_container {
+    position : absolute;
+    left : 0;
+    bottom : 118px;
+    width : 100%;
+}
+
 .home_content_inner
 {
 	width: 550px;
+}
+.breadcrumbs h5 {
+    color: #20d34a;
+}
+.custom_home_title{
+	font-size: 25px;
+    font-weight: bold;
+    color: #FFFFFF;
 }
 .home_title h1
 {
@@ -835,7 +853,7 @@ section
 {
 	width: 100%;
 	background: #f5f3f3;
-	padding-top: 92px;
+	padding-top: 60px;
 	padding-bottom: 92px;
 }
 .about_text
@@ -856,6 +874,182 @@ section
 {
 	max-width: 100%;
 }
+
+/*********************
+About page fixes
+*********************/
+.loaders_container{
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+.loader{
+	width : 118px;
+	height : 118px;
+	margin : 0 auto;
+}
+.loader span{
+	    position: absolute;
+    left: 50%;
+    bottom: -42px;
+    transform: translateX(-50%);
+    font-size: 18px;
+    font-weight: 500;
+    color: #350d36;
+    white-space: nowrap;
+}
+.testimonials {
+    width: 100%;
+    padding-top: 25px;
+	padding-bottom: 25px;
+	background-color: #350d36;
+}
+.testimonials_background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+	height: 100%;
+}
+.test_text {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(188,171,188);
+    font-style: italic;
+    line-height: 1.77;
+}
+.test_author_name a {
+    font-size: 15px;
+    font-weight: normal;
+    color: #FFFFFF;
+    font-style: italic;
+}
+
+.test_author_name span {
+    color: #20d34a;
+    font-style: italic;
+}
+.team {
+    width: 100%;
+    background: #f5f3f3;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.team_member_info .dept_title{
+	font-size: 12px;
+	text-transform: capitalize;
+}
+
+/*********************************
+8. News css fixes
+*********************************/
+.news {
+    width: 100%;
+    background: #f5f3f3;
+    padding-top: 50px;
+    padding-bottom: 91px;
+}
+.sidebar {
+    width: 100%;
+    background: #FFFFFF;
+    padding: 10px;
+}
+.search_input {
+    width: 100%;
+    height: 56px;
+    background: #f5f7fa;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+}
+.search_button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 56px;
+    height: 56px;
+    background: #20d34a;
+    text-align: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/***********************
+contacts css fixes
+*********************/
+.contact {
+    width: 100%;
+    background: #f5f3f3;
+    padding-top: 60px;
+    padding-bottom: 95px;
+}
+.contact_about_list li:not(:last-child) {
+    margin-bottom: 9px;
+}
+.contact_about_icon {
+    display: inline-block;
+    width: 31px;
+    height: 31px;
+    background: #20d34a;
+    text-align: center;
+    vertical-align: middle;
+}
+.contact_about_list li span {
+    font-size: 14px;
+    font-weight: 400;
+    color: #696969;
+    padding-left: 10px;
+}
+.contact_form > div:not(:last-child) {
+    margin-bottom: 28px;
+}
+.contact_button {
+    display: inline-block;
+    position: relative;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    margin-top: -8px;
+}
+.contact_form {
+    display: block;
+    position: relative;
+    width: 100%;
+}
+.contact_form_container {
+    width: 100%;
+}
+.contact_input {
+    position: relative;
+    width: 100%;
+    height: 44px;
+    border: none;
+    outline: none;
+    background: #f5f7fa;
+    padding-left: 25px;
+}
+.input_container::after {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    content: '';
+    background: #20d34a;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 200ms ease;
+}
+.contact_text_area {
+    height: 160px;
+    padding-top: 13px;
+}
+
 
 /*********************************
 8. Departments
@@ -944,10 +1138,81 @@ section
 	left: 0;
 	background: #FFFFFF;
 }
-.dept_button a
+.dept_button a, .colors
 {
 	color: #350d36;
 }
+.color-light{
+	color: #8c578d !important;
+}
+
+/*********************************
+news css fixes
+*********************************/
+.sidebar_title {
+    display: inline-block;
+    width: 107px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.sidebar_section ul {
+    padding-left: 40px;
+    margin-top: 15px;
+}
+.sidebar_section ul li:not(:last-child) {
+    margin-bottom: 15px;
+}
+.sidebar_section ul li a {
+    font-size: 12px;
+    font-weight: 400;
+    color: #8c578d;
+}
+.sidebar_section_title::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: calc(100% - 107px);
+    height: 2px;
+    background: #350d36;
+    content: '';
+}
+.news_posts img {
+	max-width: 100%;
+	margin-bottom: 12px;
+}
+.media-body>.news_header{
+	color: #350d36;
+    font-weight: 900;
+    font-size: 15px;
+}
+.media-body>.news_body{
+	color: #846b84;
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: normal;
+}
+.news_posts .main_news{
+	display: block;
+}
+.comment{
+	margin: 10px;
+}
+.comment a{
+	color: #20d34a;
+}
+.commented p{
+	color: #846b84;
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: normal;
+}
+.commented h5{
+	color: #846b84;
+    font-size: 12px;
+    font-weight: bold;
+}
+
 
 /*********************************
 9. Services
@@ -957,12 +1222,12 @@ section
 {
 	width: 100%;
 	background: #f5f3f3;
-	padding-top: 95px;
+	padding-top: 60px;
 	padding-bottom: 65px;
 }
 .services_row
 {
-	margin-top: 95px;
+	margin-top: 35px;
 }
 .service_col
 {
@@ -1043,7 +1308,7 @@ section
 }
 .service_text p
 {
-	color: #696969;
+	color: #917092;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -1052,9 +1317,9 @@ section
 }
 .service_title
 {
-	font-size: 20px;
-	font-weight: 700;
-	color: #232323;
+	font-size: 15px;
+	font-weight: bold;
+	color: #350d36;
 	padding-top: 41px;
 	margin-top: 26px;
 }
@@ -1213,8 +1478,8 @@ background : rgb(53, 13, 54);
 }
 .footer_about_list li span
 {
-	font-size: 14px;
-	font-weight: 500;
+	font-size: 12px;
+	font-weight: normal;
 	color: #b2b2b2;
 	padding-left: 10px;
 }
@@ -1241,8 +1506,8 @@ background : rgb(53, 13, 54);
 }
 .footer_links ul li a
 {
-	font-size: 14px;
-	font-weight: 500;
+	font-size: 12px;
+	font-weight: normal;
 	color: #b2b2b2;
 }
 .footer_news ul

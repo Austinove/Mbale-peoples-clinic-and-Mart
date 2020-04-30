@@ -1,12 +1,12 @@
 <footer class="footer">
-		<div class="footer_container" style="height: 30rem;">
+		<div class="footer_container" style="height: 26rem;">
 			<div class="container">
 				<div class="row">
 					
 					<!-- Footer - About -->
 					<div class="col-md-3">
 							<div class="footer_about_text">
-								<h3>Mbale people's Clinic and Martenate Home</h3>
+								<h3>Mbale people's Clinic and Martenat Home</h3>
 								<p>You can contact us by using the information below</p>
 								<ul class="footer_about_list">
 									<li><div class="footer_about_icon"><img src="images/phone-call.svg" alt=""></div><span>+256706263042</span></li>
@@ -14,7 +14,6 @@
 									<li><div class="footer_about_icon"><img src="images/placeholder.svg" alt=""></div><span>Kumi Rd</span></li>
 								</ul>
 							</div>
-						{{-- </div> --}}
 					</div>
 
 					<!-- Footer - Links -->
@@ -40,28 +39,5 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="copyright">
-			<div class="container">
-				<div class="row">
-					<div class="col">
-						<div class="copyright_content d-flex flex-lg-row flex-column align-items-lg-center justify-content-start">
-							<div class="cr">
-                                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Developed<i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/Austinove" target="_blank">AusDev</a>
-                            </div>
-							<div class="footer_social ml-lg-auto">
-								<ul>
-									<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>			
 		</div>
 	</footer>
