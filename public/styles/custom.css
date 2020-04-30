@@ -1,5 +1,6 @@
 .form-group > .form-custom{
-    font-size: 14px;
+    font-size: 12px;
+    border-color: #d6cdd6;
 }
 .footer_about_text > h3, h4 {
     color: white;
@@ -13,4 +14,28 @@
     font-weight: 500;
     padding-left: 10px;
     padding-right: 10px;
+}
+.modal-header > .colors {
+    font-size: 14px;
+    font-weight: bold;
+}
+.form-group > label{
+    font-size: 12px;
+}
+.add_button{
+    color: #350d36 !important;
+    border-color: #350d36 !important;
+    background: transparent !important;
+}
+.add_button:hover{
+    color: white !important;
+    background-color: #350d36 !important;
+    cursor: pointer !important;
+}
+.titles{
+    font-size: 13px;
+    font-weight: bold;
+}
+.btn-icon:hover{
+    cursor: pointer;
 }

@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('styles/responsive.css')}}">
     {{-- Dynamic stylesheets --}}
     @stack('custom-styles')
-    
+
     <link rel="stylesheet" type="text/css" href="{{ asset('styles/bootstrap4/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{ asset('plugins/font-awesome-4.7.0/css/font-awesome.min.css')}}">
     <link rel="stylesheet" href="{{ asset('plugins/OwlCarousel2-2.2.1/owl.carousel.css')}}">
@@ -85,7 +85,7 @@
         @include('layouts.nav')
         @include('layouts.modals')
         @yield('content')
-        @include('layouts.footer')
+        {{-- @include('layouts.footer') --}}
     </div>
     <script src="{{ asset('js/jquery-3.2.1.min.js')}}"></script>
     <script src="{{ asset('styles/bootstrap4/popper.js')}}"></script>
