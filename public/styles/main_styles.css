@@ -96,6 +96,7 @@ a, a:hover, a:visited, a:active, a:link
 a:hover
 {
 	color: #20d34a !important;
+	text-decoration: none !important;
 }
 ::selection
 {
@@ -317,12 +318,14 @@ section
 {
 	width: 100%;
 	background: #350d36;
+	height: 120px;
 }
 .top_bar_content
 {
 	width: 100%;
 	height: 48px;
-	padding-left: 214px;
+	padding-left: 50px;
+	margin-top: 45px;
 }
 .top_bar_item
 {
@@ -360,14 +363,14 @@ section
 .header_container
 {
 	width: 100%;
-	height: 75px;
+	height: 55px;
 	background : #f5f3f3;
 
 }
 .header_content
 {
 	width: 100%;
-	height: 103px;
+	height: 70px;
 }
 .header.scrolled .header_content
 {
@@ -412,11 +415,11 @@ section
 .logo_container
 {
 	position: absolute;
-	top: 0;
-	left: 15px;
+	top: 30px;
+	left: 0px;
 	width: 220px;
 	height: 60px;
-	background: #FFFFFF;
+	background: transparent;
 	box-shadow: 0px 31px 29px rgba(0,0,0,0.09);
 	z-index: 10;
 	-webkit-transition: all 200ms ease;
@@ -425,73 +428,27 @@ section
 	-o-transition: all 200ms ease;
 	transition: all 200ms ease;
 }
-.header.scrolled .logo_container
-{
-	top: 48px;
-	height: 80px;
-}
-.logo_container a
-{
-	display: block;
-	position: relative;
-	width: 100%;
-	height: 100%;
-}
 .logo_content
 {
-	width: 100%;
+	width: 200px;
 	height: 100%;
-	padding-left: 20px;
-}
-.logo_line
-{
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	height: 4px;
-}
-.logo
-{
-	margin-top: 0px;
 }
 .logo span
 {
-	color: #20d34a;
-}
-.logo_container a .logo:hover
-{
-	color: #283290;
+	color: white;
 }
 .logo_text
 {
 	font-size: 20px;
 	font-weight: 500;
-	color: #350d36;
+	color: white;
 	line-height: 0.75;
-}
-.logo_box
-{
-	display: inline-block;
-	width: 23px;
-	height: 23px;
-	background: #20d34a;
-	color: #FFFFFF;
-	font-size: 24px;
-	line-height: 23px;
-	text-align: center;
-	-webkit-transform: translateY(-2px);
-	-moz-transform: translateY(-2px);
-	-ms-transform: translateY(-2px);
-	-o-transform: translateY(-2px);
-	transform: translateY(-2px);
-	margin-left: 1px;
 }
 .logo_sub
 {
 	font-size: 14px;
 	font-weight: 400;
-	color: #8f8e8e;
+	color: white;
 	padding-left: 3px;
 	margin-top: 2px;
 }
@@ -652,7 +609,7 @@ section
 .home
 {
 	width: 100%;
-	height: 900px;
+	height: 700px;
 }
 .custom_home{
 	height: 400px;
@@ -1237,10 +1194,7 @@ news css fixes
 {
 	width: 100%;
 	background: #f5f7fa;
-	padding-top: 46px;
-	padding-left: 30px;
-	padding-right: 30px;
-	padding-bottom: 57px;
+	padding: 20px;
 }
 .service:hover
 {

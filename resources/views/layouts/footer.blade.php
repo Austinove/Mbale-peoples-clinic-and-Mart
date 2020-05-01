@@ -4,7 +4,7 @@
 				<div class="row">
 					
 					<!-- Footer - About -->
-					<div class="col-md-3">
+					<div class="col-md-3 col-sm-12">
 							<div class="footer_about_text">
 								<h5 class="white_color">Mbale people's Clinic and Martenat Home</h5>
 								<p>You can contact us by using the information below</p>
@@ -17,7 +17,7 @@
 					</div>
 
 					<!-- Footer - Links -->
-					<div class="col-md-4">
+					<div class="col-md-4 col-sm-12">
 						<div class="footer_links footer_column" style="padding-top: 0px">
 							<div class="footer_about_text">
 								<h5 class="white_color">Useful Links</h5>
@@ -32,7 +32,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="col-md-5">
+					<div class="col-md-5 col-sm-12">
 						<div class="footer_about_text" style="overflow: hidden">
 							<h5 class="white_color">Map</h5>
 							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.1120479635842!2d34.17774463306795!3d1.078086451248954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1778b66c9a9f2c71%3A0xac02e03f3a00a25c!2sMbale%20People&#39;s%20Clinic%20(Vaena)!5e0!3m2!1sen!2sus!4v1588141719639!5m2!1sen!2sus" width="600" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>

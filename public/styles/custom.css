@@ -42,3 +42,12 @@
 .white_color{
     color: white !important;
 }
+.img_logo{
+    position: relative;
+    top: 20px;
+}
+.logo_desc{
+    position: relative;
+    left: 35px;
+    bottom: 20px;
+}

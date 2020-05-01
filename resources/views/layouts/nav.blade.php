@@ -1,11 +1,24 @@
 <header class="header trans_200">
 		
 		<!-- Top Bar -->
-		<div class="top_bar">
+		<div class="top_bar" >
+			<div class="home_slider_background" style="background-image:url(images/news.jpg); opacity: 0.3;"></div>
 			<div class="container">
 				<div class="row">
 					<div class="col">
 						<div class="top_bar_content d-flex flex-row align-items-center justify-content-start">
+							{{-- <img src="images/newlogo.jpg" height="55px"/> --}}
+							<div class="logo_content d-flex flex-column align-items-start justify-content-center">
+									<div class="img_logo">
+									<img src="images/logo1.jpg" height="50px" />
+									</div>
+									<div class="logo_desc">
+										<div class="logo d-flex flex-row align-items-center justify-content-center">
+											<div class="logo_text">Mbale<span> People's</span></div>
+										</div>
+										<div class="logo_sub">Clinic and martenat home</div>
+									</div>
+								</div>
 							<div class="top_bar_item"><a href="#">FAQ</a></div>
 							<div class="top_bar_item"><a data-toggle="modal" data-target="#appointment" href="#">Request an Appointment</a></div>
 							<div class="emergencies  d-flex flex-row align-items-center justify-content-start ml-auto">For Emergencies: +563 47558 623</div>
@@ -69,12 +82,15 @@
 						<div class="logo_container">
 							<a href="#">
 								<div class="logo_content d-flex flex-column align-items-start justify-content-center">
-									<div class="logo_line"></div>
-									<div class="logo d-flex flex-row align-items-center justify-content-center">
-										<div class="logo_text">Mbale<span>People's</span></div>
-										<div class="logo_box">+</div>
+									<div class="img_logo">
+									<img src="images/logo1.jpg" height="50px" />
 									</div>
-									<div class="logo_sub">Clinic and martenat home</div>
+									<div class="logo_desc">
+										<div class="logo d-flex flex-row align-items-center justify-content-center">
+											<div class="logo_text">Mbale<span>People's</span></div>
+										</div>
+										<div class="logo_sub">Clinic and martenat home</div>
+									</div>
 								</div>
 							</a>
 						</div>

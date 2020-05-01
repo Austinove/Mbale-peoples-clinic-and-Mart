@@ -63,6 +63,9 @@
 
 @media only screen and (max-width: 1199px)
 {
+	.logo_container_outer{
+		display: none;
+	}
 	.box
 	{
 		height: 313px;
@@ -97,17 +100,38 @@
 
 @media only screen and (max-width: 991px)
 {
+	.logo_container_outer{
+		display: none;
+	}
 	.main_nav
 	{
 		display: none;
 	}
 	.logo_container
 	{
-		width: 190px;
+		width: 200px;
+		position: absolute;
+		top: 0px;
+		bottom: -15px;
+		width: 220px;
+		height: 60px;
+		background: #522653;
+		box-shadow: 0px 31px 29px rgba(0,0,0,0.09);
+		z-index: 10;
+		-webkit-transition: all 200ms ease;
+		-moz-transition: all 200ms ease;
+		-ms-transition: all 200ms ease;
+		-o-transition: all 200ms ease;
+		transition: all 200ms ease;
 	}
-	.logo_content
-	{
-		padding-left: 10px;
+	.img_logo{
+		position: relative;
+    	top: 30px;
+	}
+	.logo_desc{
+		position: relative;
+		bottom: 20px;
+		left: 35px;
 	}
 	.logo_text
 	{
@@ -120,7 +144,7 @@
 	}
 	.top_bar_content
 	{
-		padding-left: 166px;
+		padding-left: 0px;
 	}
 	.top_bar_item
 	{
@@ -240,6 +264,9 @@
 
 @media only screen and (max-width: 767px)
 {
+	.logo_container_outer{
+		display: contents;
+	}
 	.top_bar
 	{
 		display: none;
@@ -304,7 +331,7 @@
 	}
 	.logo_container
 	{
-		width: 141px;
+		width: 175px;
 		height: 77px;
 	}
 	.logo_content
