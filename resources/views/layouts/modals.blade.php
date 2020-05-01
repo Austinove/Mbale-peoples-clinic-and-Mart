@@ -9,32 +9,33 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <form id="ajax_class_form">
           <div class="form-row">
+            @csrf
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="recipient-name" class="col-form-label colors">Name*</label>
-                        <input type="text" class="form-control form-custom input-xs" id="recipient-name">
+                        <label for="appointment-name" class="col-form-label colors">Name*</label>
+                        <input type="text" class="form-control form-custom input-xs" name="appointment-name" id="appointment-name">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="recipient-name" class="col-form-label colors">Number*</label>
-                        <input type="text" class="form-control form-custom input-xs" id="recipient-name">
+                        <label for="appointment-number" class="col-form-label colors">Number*</label>
+                        <input type="text" class="form-control form-custom input-xs" name="appointment-number" id="appointment-number">
                     </div>
                 </div>
             </div>
             <div class="form-row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="recipient-name" class="col-form-label colors">When*</label>
-                        <input type="Date" class="form-control form-custom input-xs" id="recipient-name">
+                        <label for="appointment-date" class="col-form-label colors">When*</label>
+                        <input type="Date" class="form-control form-custom input-xs" name="appointment-date" id="appointment-date">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="recipient-name" class="col-form-label colors">Message*</label>
-                        <textarea class="form-control form-custom input-xs" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <label for="appointment-sms" class="col-form-label colors">Message*</label>
+                        <textarea class="form-control form-custom input-xs" name="appointment-sms" id="appointment-sms" rows="3"></textarea>
                     </div>
                 </div>
             </div>
@@ -42,7 +43,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-outline-primary add_button">Request</button>
+        <button type="button" class="btn btn-outline-primary add_button" id="appointment-request">Request</button>
       </div>
     </div>
   </div>

@@ -314,37 +314,6 @@
 						</div>
 					</a>
 				</div>
-
-				<!-- Service -->
-				<div class="col-lg-3 col-md-4 service_col">
-					<a href="services.html">
-						<div class="service text-center trans_200">
-							<div class="service_icon"><img class="svg" src="images/service_5.svg" alt=""></div>
-							<div class="service_title trans_200">Neonatology</div>
-							<div class="service_text text-left">
-								<p>
-									Neonatology is a subspecialty of pediatrics that 
-									consists of the medical care of newborn infants,
-								</p>
-							</div>
-						</div>
-					</a>
-				</div>
-
-				<!-- Service -->
-				<div class="col-lg-3 col-md-4 service_col">
-					<a href="services.html">
-						<div class="service text-center trans_200">
-							<div class="service_icon"><img class="svg" src="images/service_6.svg" alt=""></div>
-							<div class="service_title trans_200">Biochemistry</div>
-							<div class="service_text text-left">
-								<p>
-									Biochemistry focuses on processes happening at a molecular level.
-								</p>
-							</div>
-						</div>
-					</a>
-				</div>
 			</div>
 		</div>
 	</div>

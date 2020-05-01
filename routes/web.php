@@ -32,3 +32,4 @@ Route::get('contactus', function(){
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/appointment/create', 'AppointmentsController@store')->name('appointmentCreate');
