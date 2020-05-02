@@ -7,7 +7,7 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center" style="margin-top: 15%; margin-bottom: 5%;">
+    <div class="row justify-content-center" style="margin-top: 200px; margin-bottom: 40px;">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
