@@ -60,29 +60,30 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <form id="slides-submition" method="POST" enctype="multipart/form-data">
             <div class="form-row">
+              @csrf
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label for="recipient-name" class="col-form-label colors">Title*</label>
-                        <input type="text" class="form-control form-custom input-xs" id="recipient-name">
+                        <label for="slides-title" class="col-form-label colors">Title*</label>
+                        <input type="text" class="form-control form-custom input-xs" id="slides-title" name="slides-title">
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="form-group">
                         <label for="recipient-name" class="col-form-label colors">Image*</label>
-                        <input type="file" class="form-control form-custom input-xs" id="recipient-name">
+                        <input type="file" class="form-control form-custom input-xs" id="slides-image" name="slides-image">
                     </div>
                 </div>
                 <div class="col-md-5">
                   <div class="form-group">
                       <label for="recipient-name" class="col-form-label colors">Description*</label>
-                      <textarea class="form-control form-custom input-xs" id="exampleFormControlTextarea1" rows="3"></textarea>
+                      <textarea class="form-control form-custom input-xs" id="slides-desc" name="slides-desc" rows="3"></textarea>
                   </div>
                 </div>
             </div>
                 
-            <button type="button" class="btn btn-outline-primary btn-sm mb-2 add_button">
+            <button type="submit" class="btn btn-outline-primary btn-sm mb-2 add_button" id="add-slide">
               <i class="fa fa-plus-circle"></i> Add Slide
             </button>
         </form>
@@ -163,31 +164,32 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <form id="news-submition" method="POST" enctype="multipart/form-data">
             <div class="form-row">
+              @csrf
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="recipient-name" class="col-form-label colors">News Title*</label>
-                        <input type="text" class="form-control form-custom input-xs" id="recipient-name">
+                        <label for="news-title" class="col-form-label colors">News Title*</label>
+                        <input type="text" class="form-control form-custom input-xs" name="news-title" id="news-title">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="recipient-name" class="col-form-label colors">Image*</label>
-                        <input type="file" class="form-control form-custom input-xs" id="recipient-name">
+                        <label for="news-image" class="col-form-label colors">Image*</label>
+                        <input type="file" class="form-control form-custom input-xs" name="news-image" id="news-image">
                     </div>
                 </div>
             </div>
             <div class="form-row">
                 <div class="col-md-8">
                   <div class="form-group">
-                      <label for="recipient-name" class="col-form-label colors">News Description*</label>
-                      <textarea class="form-control form-custom input-xs" id="exampleFormControlTextarea1" rows="5"></textarea>
+                      <label for="news-desc" class="col-form-label colors">News Description*</label>
+                      <textarea class="form-control form-custom input-xs" name="news-desc" id="news-desc" rows="5"></textarea>
                   </div>
                 </div>
             </div>
                 
-            <button type="button" class="btn btn-outline-primary btn-sm mb-2 add_button">
+            <button type="submit" class="btn btn-outline-primary btn-sm mb-2 add_button">
               <i class="fa fa-plus-circle"></i> Add News
             </button>
         </form>
@@ -268,29 +270,30 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <form id="staff-submition" method="POST" enctype="multipart/form-data">
             <div class="form-row">
+              @csrf
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label for="recipient-name" class="col-form-label colors">Name*</label>
-                        <input type="text" class="form-control form-custom input-xs" id="recipient-name">
+                        <label for="staff-name" class="col-form-label colors">Name*</label>
+                        <input type="text" class="form-control form-custom input-xs" name="staff-name" id="staff-name">
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label for="recipient-name" class="col-form-label colors">Department*</label>
-                        <input type="text" class="form-control form-custom input-xs" id="recipient-name">
+                        <label for="staff-dept" class="col-form-label colors">Department*</label>
+                        <input type="text" class="form-control form-custom input-xs" name="staff-dept" id="staff-dept">
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label for="recipient-name" class="col-form-label colors">Image*</label>
-                        <input type="file" class="form-control form-custom input-xs" id="recipient-name">
+                        <label for="staff-image" class="col-form-label colors">Image*</label>
+                        <input type="file" class="form-control form-custom input-xs" name="staff-image" id="staff-image">
                     </div>
                 </div>
             </div>
                 
-            <button type="button" class="btn btn-outline-primary btn-sm mb-2 add_button">
+            <button type="submit" class="btn btn-outline-primary btn-sm mb-2 add_button">
               <i class="fa fa-plus-circle"></i> Add Staff Member
             </button>
         </form>

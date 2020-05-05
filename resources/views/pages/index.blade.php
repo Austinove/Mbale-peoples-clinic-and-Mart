@@ -9,7 +9,7 @@
 				
 				<!-- Slider Item -->
 				<div class="owl-item">
-                    <div class="home_slider_background" style="background-image: url(images/home_background_1.jpg)"></div>
+                    <div class="home_slider_background" style="background-image: url(images/contact.jpg)"></div>
 					<div class="home_content">
 						<div class="container">
 							<div class="row justify-content-md-center">

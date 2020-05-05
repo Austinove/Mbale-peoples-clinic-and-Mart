@@ -33,3 +33,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/appointment/create', 'AppointmentsController@store')->name('appointmentCreate');
+Route::post('/create/slide', 'SlidesController@store')->name('slidesCreate');
+Route::post('/create/news', 'NewsController@store')->name('newsCreate');
+Route::post('/create/staff', 'StaffController@store')->name('staffCreate');

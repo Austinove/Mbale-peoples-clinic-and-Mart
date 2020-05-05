@@ -2,7 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Slide;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Http\UploadedFile;
+use Illuminate\Database\QueryException;
+use Illuminate\Support\Facades\Auth;
 
 class SlidesController extends Controller
 {
@@ -34,7 +39,37 @@ class SlidesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            "slides-title" => "required",
+            "slides-desc" => "required",
+            "slides-image" => "required|image|max:2000|mimes:jpeg,png,jpg",
+        ]);
+        
+        if ($request->hasFile('slides-image') && $request->file('slides-image') instanceof UploadedFile) {
+            $filenameWithExt = $request->file("slides-image")->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file("slides-image")->getClientOriginalExtension();
+            $fileNameToStore = $filename."_".time().".".$extension;
+            $path = $request->file("slides-image")->storeAs("public/slides", $fileNameToStore);
+            
+            $slide = new Slide;
+            $slide->title = $request->input("slides-title");
+            $slide->image = $fileNameToStore;
+            $slide->description = $request->input("slides-desc");
+            $user = User::findOrFail(Auth::user()->id);
+            try {
+                $user->slides()->save($slide);
+                return response()->json([
+                    "msg" => "Slide saved Successfully"
+                ]);
+            } catch (QueryException $th) {
+                throw $th->getMessage();
+            }
+        }else{
+            return response()->json([
+                'msg' => "No image"
+            ]);
+        }
     }
 
     /**

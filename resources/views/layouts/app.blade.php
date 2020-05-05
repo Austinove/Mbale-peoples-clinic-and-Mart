@@ -53,24 +53,75 @@
                 autoplayHoverPause: true
             });
         });
-    </script>
-    <script>
-        $(document).ready(function(){
+
+        $(document).ready(function(e){
+            //submition of appointments
+            // e.preventDefault();
             $('#appointment-request').click(function() {
                 $(this).prop("disabled", true);
                 $.ajax({
-                    url: '{{url("appointment/create")}}',
+                    url: 'appointment/create',
                     type: 'post',
                     data: $('#ajax_class_form').serialize(),
                     success: function(response){
-                        var response = jQuery.parseJSON(response);
+                        console.log(response);
+                    }
+                });
+            });
+            
+            //submition of slides
+            $('#slides-submition').submit(function(e){
+                e.preventDefault();
+                // $(this).prop("disable", true);
+                $.ajax({
+                    url: "create/slide",
+                    type: "post",
+                    data: new FormData(this),
+                    dataType: 'json',
+                    contentType: false,
+                    cache: false,
+                    processData: false,
+                    success: function(response){
+                        console.log(response);
+                    }
+                });
+            });
+
+            //news submitions
+            $("#news-submition").submit(function(e){
+                e.preventDefault();
+                $.ajax({
+                    url: "create/news",
+                    type: "post",
+                    data: new FormData(this),
+                    dataType: "json",
+                    contentType: false,
+                    cache: false,
+                    processData: false,
+                    success: function(response){
+                        console.log(response);
+                    }
+                });
+            });
+
+            //staff submitions
+            $("#staff-submition").submit(function(e){
+                e.preventDefault();
+                $.ajax({
+                    url: "create/staff",
+                    type: "post",
+                    data: new FormData(this),
+                    contentType:false,
+                    cache: false,
+                    processData: false,
+                    success: function(response){
                         console.log(response);
                     }
                 })
             })
         });
     </script>
-
+    {{-- <script scr="{{ asset('js/formSubmitions.js')}}"></script> --}}
     <script src="{{ asset('plugins/greensock/TweenMax.min.js')}}"></script>
     <script src="{{ asset('plugins/greensock/TimelineMax.min.js')}}"></script>
     <script src="{{ asset('plugins/scrollmagic/ScrollMagic.min.js')}}"></script>
@@ -82,7 +133,7 @@
     <script src="{{ asset('plugins/parallax-js-master/parallax.min.js')}}"></script>
     <script src="{{ asset('js/about.js')}}"></script>
     <script src="{{ asset('js/custom.js')}}"></script>
-    <script src="{{ asset('js/appointment.js')}}"></script>
+    <script src="{{ asset('js/formSubmitions.js')}}"></script>
     
     
 

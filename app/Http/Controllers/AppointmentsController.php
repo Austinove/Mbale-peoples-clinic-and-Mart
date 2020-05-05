@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Appointment;
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 
 class AppointmentsController extends Controller
@@ -34,8 +36,21 @@ class AppointmentsController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        return $request;
+        try {
+            $appointment = new Appointment([
+                'name' => $request['appointment-name'],
+                'number' => $request['appointment-number'],
+                'date' => $request['appointment-date'],
+                'message' => $request['appointment-sms']
+            ]);
+            $appointment->save();
+            return response()->json([
+                'msg' => 'Appointment Sent'
+            ]);
+        } catch (QueryException $e) {
+            throw $e->getMessage();
+        }
+        
     }
 
     /**

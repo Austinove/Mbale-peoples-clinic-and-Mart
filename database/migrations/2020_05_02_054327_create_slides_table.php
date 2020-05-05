@@ -15,7 +15,7 @@ class CreateSlidesTable extends Migration
     {
         Schema::create('slides', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constanted('users');
+            $table->foreignId('user_id')->constrained('users');
             $table->string('title');
             $table->string('image');
             $table->text('description');
