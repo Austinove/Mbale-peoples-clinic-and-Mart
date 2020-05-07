@@ -12,10 +12,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('pages.index');
-});
 Route::get('/aboutus', function (){
     return view("pages.about");
 });
@@ -30,9 +26,13 @@ Route::get('contactus', function(){
 });
 
 Auth::routes();
-
+Route::get('/', 'HomeController@index')->name('dashboard');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/appointment/create', 'AppointmentsController@store')->name('appointmentCreate');
 Route::post('/create/slide', 'SlidesController@store')->name('slidesCreate');
+Route::get('/getSlides', 'SlidesController@index')->name('fetchSlides');
+Route::post('/edit/slide/{id}', 'SlidesController@update')->name('updateSlide');
+Route::delete('/delete/slide/{id}', 'SlidesController@destroy')->name('deleteSlide');
 Route::post('/create/news', 'NewsController@store')->name('newsCreate');
+Route::post('/getNews', 'NewsController@index')->name('fetchNews');
 Route::post('/create/staff', 'StaffController@store')->name('staffCreate');

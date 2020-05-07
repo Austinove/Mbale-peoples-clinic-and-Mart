@@ -621,6 +621,7 @@ section
 }
 .home_slider_background
 {
+	background-image:url('images/home_background_1.jpg');
 	position: absolute;
 	top: 0;
 	left: 0;

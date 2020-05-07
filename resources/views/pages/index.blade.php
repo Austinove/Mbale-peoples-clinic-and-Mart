@@ -5,76 +5,32 @@
 	<div class="home">
 		<div class="home_slider_container">
 			<!-- Home Slider -->
-			<div class="owl-carousel owl-theme home_slider">
+			<div class="owl-carousel owl-theme home_slider" id="slides-holder">
 				
 				<!-- Slider Item -->
-				<div class="owl-item">
-                    <div class="home_slider_background" style="background-image: url(images/contact.jpg)"></div>
-					<div class="home_content">
-						<div class="container">
-							<div class="row justify-content-md-center">
-								<div class="col">
-									<div class="home_content_inner">
-										<div class="home_title"><h1>Meet the perfect doctors</h1></div>
-										<div class="home_text">
-											<p>
-												Need to recover quickly from sickness, meet the best doctors
-												in Mbale People's Clinic and Martenat Home
-											</p>
+				@if (count($slides)>0)
+					@foreach ($slides as $slide)
+						<div class="owl-item">
+							<div class="home_slider_background" style="background-image:url(storage/slides/{{$slide->image}})"></div>
+							<div class="home_content">
+								<div class="container">
+									<div class="row justify-content-md-center">
+										<div class="col">
+											<div class="home_content_inner">
+												<div class="home_title"><h1>{{$slide->title}}</h1></div>
+												<div class="home_text">
+													<p>{{$slide->description}}</p>
+												</div>
+													<div class="button btn-slide cta_button"><a href="#">request for a health plan</a></div>
+											</div>
 										</div>
-											<div class="button btn-slide cta_button"><a href="#">request for a health plan</a></div>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-
-				<!-- Slider Item -->
-				<div class="owl-item">
-					<div class="home_slider_background" style="background-image:url(images/home_background_1.jpg)"></div>
-					<div class="home_content">
-						<div class="container">
-							<div class="row">
-								<div class="col">
-									<div class="home_content_inner">
-										<div class="home_title"><h1>Affordable medication in our hospital</h1></div>
-										<div class="home_text">
-											<p>
-												All healthy care services are done at the lowest price ever
-												here in Mbale People's Clinic and Martenat Home
-											</p>
-										</div>
-											<div class="button btn-slide cta_button"><a href="#">request for a health plan</a></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Slider Item -->
-				<div class="owl-item">
-					<div class="home_slider_background" style="background-image:url(images/home_background_1.jpg)"></div>
-					<div class="home_content">
-						<div class="container">
-							<div class="row">
-								<div class="col">
-									<div class="home_content_inner">
-										<div class="home_title"><h1>Free healthy checkup is acceptable here</h1></div>
-										<div class="home_text">
-											<p>
-												Come and check your self at no cost. Come and know what would be disturbing
-												your wellfare with free consultation from our doctors
-											</p>
-										</div>
-											<div class="button btn-slide cta_button"><a href="#">request for a health plan</a></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+					@endforeach
+					
+				@endif
 			</div>
 			
 

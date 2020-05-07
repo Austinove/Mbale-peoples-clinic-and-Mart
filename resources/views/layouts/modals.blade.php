@@ -1,5 +1,5 @@
 <!-- request appointment -->
-<div class="modal fade" id="appointment" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="appointment" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -50,17 +50,16 @@
 </div>
 
 <!-- Add slides -->
-<div class="modal fade" id="slides" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="slides" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title colors" id="exampleModalLongTitle">Action on Slides</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <form id="slides-submition" method="POST" enctype="multipart/form-data">
+        <form id="slides-submition" enctype="multipart/form-data">
             <div class="form-row">
               @csrf
                 <div class="col-md-4">
@@ -83,7 +82,7 @@
                 </div>
             </div>
                 
-            <button type="submit" class="btn btn-outline-primary btn-sm mb-2 add_button" id="add-slide">
+            <button type="submit" data="save" class="btn btn-outline-primary btn-sm mb-2 add_button" id="add-slide">
               <i class="fa fa-plus-circle"></i> Add Slide
             </button>
         </form>
@@ -96,65 +95,21 @@
                 <th scope="col" class="titles colors">Action</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">
-                        <img src="images/logo.jpg" height="40px" alt="image">
-                    </th>
-                    <td class="color-light"><p>Hi checkout</p></td>
-                    <td>
-                      <p class="color-light">
-                        Hello there checkout the impossible archivements 
-                        made by Mbale People's Clinic and Martenate Home.
-                      </p>
-                    </td>
-                    <td>
-                      <span><i class="btn-icon fa fa-edit" style="color:blue"></i> | <i style="color: red" class="btn-icon fa fa-trash"></i></span>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">
-                        <img src="images/logo.jpg" height="40px" alt="image">
-                    </th>
-                    <td class="color-light"><p>Hi checkout</p></td>
-                    <td>
-                      <p class="color-light">
-                        Hello there checkout the impossible archivements 
-                        made by Mbale People's Clinic and Martenate Home.
-                      </p>
-                    </td>
-                    <td>
-                      <span><i class="btn-icon fa fa-edit" style="color:blue"></i> | <i style="color: red" class="btn-icon fa fa-trash"></i></span>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">
-                        <img src="images/logo.jpg" height="40px" alt="image">
-                    </th>
-                    <td class="color-light"><p>Hi checkout</p></td>
-                    <td>
-                      <p class="color-light">
-                        Hello there checkout the impossible archivements 
-                        made by Mbale People's Clinic and Martenate Home.
-                      </p>
-                    </td>
-                    <td>
-                      <span><i class="btn-icon fa fa-edit" style="color:blue"></i> | <i style="color: red" class="btn-icon fa fa-trash"></i></span>
-                    </td>
-                </tr>
-            </tbody>
+            {{-- Getting Slides from jQuery --}}
+            <tbody class="slides-tbody"></tbody>
         </table>
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btn-sm add_button" data-dismiss="modal">Done</button>
+        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary btn-sm add_button" data-dismiss="modal" id="applySlides">Apply Slides</button>
       </div>
     </div>
   </div>
 </div>
 
 {{-- Add news --}}
-<div class="modal fade" id="news" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="news" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -260,7 +215,7 @@
 </div>
 
 {{-- Add staff --}}
-<div class="modal fade" id="staff" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="staff" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -361,7 +316,7 @@
 </div>
 
 {{-- Add profile --}}
-<div class="modal fade" id="profile" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="profile" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">

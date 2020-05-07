@@ -55,7 +55,8 @@
         });
 
         $(document).ready(function(e){
-            //submition of appointments
+
+//--------------------Appointments Actions------------------------------------
             // e.preventDefault();
             $('#appointment-request').click(function() {
                 $(this).prop("disabled", true);
@@ -68,13 +69,53 @@
                     }
                 });
             });
-            
-            //submition of slides
+
+//-----------------------------------Slides Actions----------------------------------
+            $('#applySlides').click(function(){
+                location.reload(true);
+            });
+            //get request function
+            function getRequest(url){
+                return $.ajax({
+                    url:url,
+                    type: "get",
+                    dataType: 'json',
+                    success: (res) => {
+                        return res;
+                        console.log(res);
+                    }
+                });
+            }
+            //delete request function
+            function deleteRequest(url){
+                return $.ajax({
+                    url:url,
+                    type: 'delete',
+                    data: {_token: "{{ csrf_token() }}"},
+                    dataType: 'json',
+                    sucess: (res) => {
+                        return res;
+                        console.log(res);
+                    }
+                });
+            }
+            //Empting inputs
+            function emputyInputs(){
+                $('#slides-title').val('');
+                $('#slides-desc').val('');
+                $('#slides-image').val('');
+            }
+            //slides creation and editing
             $('#slides-submition').submit(function(e){
                 e.preventDefault();
-                // $(this).prop("disable", true);
+                var actionUrl = "create/slide";
+                var id = $('#add-slide').attr('data');
+                if (id !== 'save') {
+                    actionUrl = `edit/slide/${id}`;
+                }
+                $(this).prop("disable", true);
                 $.ajax({
-                    url: "create/slide",
+                    url: actionUrl,
                     type: "post",
                     data: new FormData(this),
                     dataType: 'json',
@@ -83,9 +124,67 @@
                     processData: false,
                     success: function(response){
                         console.log(response);
+                        if(response.msg === "Slide saved Successfully"){
+                            emputyInputs();
+                            $('#add-slide').html('<i class="fa fa-plus-circle"></i> Add Slide');
+                            $('#add-slide').attr('data', 'save');
+                            renderSlides();
+                        }
                     }
+                    
                 });
             });
+            //Editing Slide
+            $(document).on("click", ".edit-slide", function(){
+                var id = $(this).attr('id-data');
+                $('#slides-title').val($(this).attr('title-data'));
+                $('#slides-desc').val($(this).attr('desc-data'));
+                $('#add-slide').attr('data', id);
+                $('#add-slide').html('<i class="fa fa-save"></i> Save Changes');
+            });
+            //Deleting Slide
+            $(document).on("click", ".delete-slide", function(){
+                var id = $(this).attr('data');
+                url = `delete/slide/${id}`;
+                $.when(deleteRequest(url).done(response => {
+                    if(response.msg === "Slide deleted"){
+                        renderSlides();
+                    }
+                }));
+            });
+            //Rendering Slides;
+            function renderSlides() {
+                url = "getSlides";
+                $.when(getRequest(url).done(slides => {
+                    $('.slides-tbody').html('');
+                    slides.forEach(slide => {
+                        $('.slides-tbody').append(`
+                            <tr>
+                                <th scope="row">
+                                    <img src="storage/slides/${slide.image}" height="40px" alt="image">
+                                </th>
+                                <td class="color-light" style="width: 20%;"><p>${slide.title}</p></td>
+                                <td style="width: 50%;">
+                                    <p class="color-light">${slide.description}</p>
+                                </td>
+                                <td style="width: 10%;">
+                                    <span>
+                                        <i class="btn-icon fa fa-edit edit-slide"
+                                            id-data="${slide.id}"
+                                            title-data="${slide.title}" 
+                                            desc-data="${slide.description}"
+                                            style="color:blue"
+                                        ></i> | 
+                                        <i style="color: red" data="${slide.id}" class="btn-icon fa fa-trash delete-slide"></i>
+                                    </span>
+                                </td>
+                            </tr>
+                        `);
+                    });
+                }));
+            }
+            renderSlides();
+
 
             //news submitions
             $("#news-submition").submit(function(e){

@@ -18,7 +18,7 @@ class SlidesController extends Controller
      */
     public function index()
     {
-        //
+        return response()->json(Slide::all());
     }
 
     /**
@@ -103,7 +103,49 @@ class SlidesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            "slides-title" => "required",
+            "slides-desc" => "required"
+        ]);
+
+        $user = User::findOrFail(Auth::user()->id);
+
+        if ($request->hasFile('slides-image') && $request->file('slides-image') instanceof UploadedFile) {
+            $this->validate($request, [
+                "slides-image" => "required|image|max:2000|mimes:jpeg,png,jpg",
+            ]);
+            
+            $filenameWithExt = $request->file("slides-image")->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file("slides-image")->getClientOriginalExtension();
+            $fileNameToStore = $filename . "_" . time() . "." . $extension;
+            $path = $request->file("slides-image")->storeAs("public/slides", $fileNameToStore);
+            
+            try {
+                $user->slides()->whereId($id)->update([
+                    'title' => $request->input('slides-title'),
+                    'image' => $fileNameToStore,
+                    'description' => $request->input('slides-desc')
+                ]);
+                return response()->json([
+                    "msg" => "Slide saved Successfully"
+                ]);
+            } catch (QueryException $th) {
+                throw $th->getMessage();
+            }
+        }
+        
+        try {
+            $user->slides()->whereId($id)->update([
+                'title' => $request->input('slides-title'),
+                'description' => $request->input('slides-desc')
+            ]);
+            return response()->json([
+                "msg" => "Slide saved Successfully"
+            ]);
+        } catch (QueryException $th) {
+            throw $th->getMessage();
+        }
     }
 
     /**
@@ -114,6 +156,14 @@ class SlidesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::findOrFail(Auth::user()->id);
+        try {
+            $user->slides()->whereId($id)->delete();
+            return response()->json([
+                "msg" => "Slide deleted"
+            ]);
+        } catch (QueryException $th) {
+            throw $th->getMessage();
+        }
     }
 }
