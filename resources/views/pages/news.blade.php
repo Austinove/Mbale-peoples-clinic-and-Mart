@@ -30,81 +30,9 @@
 				
 				<!-- News Posts -->
 				<div class="col-lg-8">
-					<div class="news_posts">
-						<div class="media main_news">
-							<hr/>
-							<div>
-							<img class="mr-3" height="200px" src="images/news_3.jpg" alt="Generic placeholder image">
-							</div>
-							<div class="media-body">
-								<h5 class="mt-0 news_header">Media heading</h5>
-								<p class="news_body">
-									Recovery from Corona virus from our hospital,
-									come and be immunized against corona virus
-									Recovery from Corona virus from our hospital,
-									come and be immunized against corona virus
-									Recovery from Corona virus from our hospital,
-									come and be immunized against corona virus
-									Recovery from Corona virus from our hospital,
-									come and be immunized against corona virus
-								</p>
-								<div class="comment">
-								<a href="#" class="comment">Add comment</a>
-								</div>
-								<div class="media mt-3">
-									<a class="pr-3" href="#">
-										<img height="20px" class="rounded" src="images/news_3.jpg" alt="Generic placeholder image">
-									</a>
-									<div class="media-body commented">
-										<h5 class="mt-0">bryan@bryan.com</h5>
-										<p>
-											This is a good archivement of this hospita.
-											I can't wait to come for it
-											This is a good archivement of this hospita.
-											I can't wait to come for it
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="media main_news">
-							<hr/>
-							<div>
-							<img class="mr-3" height="200px" src="images/news_3.jpg" alt="Generic placeholder image">
-							</div>
-							<div class="media-body">
-								<h5 class="mt-0 news_header">Media heading</h5>
-								<p class="news_body">
-									Recovery from Corona virus from our hospital,
-									come and be immunized against corona virus
-									Recovery from Corona virus from our hospital,
-									come and be immunized against corona virus
-									Recovery from Corona virus from our hospital,
-									come and be immunized against corona virus
-									Recovery from Corona virus from our hospital,
-									come and be immunized against corona virus
-								</p>
-								<div class="comment">
-								<a href="#" class="comment">Add comment</a>
-								</div>
-								<div class="media mt-3">
-									<a class="pr-3" href="#">
-										<img height="20px" class="rounded" src="images/news_3.jpg" alt="Generic placeholder image">
-									</a>
-									<div class="media-body commented">
-										<h5 class="mt-0">bryan@bryan.com</h5>
-										<p>
-											This is a good archivement of this hospita.
-											I can't wait to come for it
-											This is a good archivement of this hospita.
-											I can't wait to come for it
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						
-					</div>
+					
+					{{-- fetch news from jQuery --}}
+					<div class="news_posts"></div>
 				</div>
 
 				

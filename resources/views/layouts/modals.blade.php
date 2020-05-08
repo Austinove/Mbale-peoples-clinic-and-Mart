@@ -55,8 +55,6 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title colors" id="exampleModalLongTitle">Action on Slides</h5>
-          <span aria-hidden="true">&times;</span>
-        </button>
       </div>
       <div class="modal-body">
         <form id="slides-submition" enctype="multipart/form-data">
@@ -114,9 +112,6 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title colors" id="exampleModalLongTitle">Add News to the Website</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
       </div>
       <div class="modal-body">
         <form id="news-submition" method="POST" enctype="multipart/form-data">
@@ -144,7 +139,7 @@
                 </div>
             </div>
                 
-            <button type="submit" class="btn btn-outline-primary btn-sm mb-2 add_button">
+            <button type="submit" data="save" class="btn btn-outline-primary btn-sm mb-2 add_button" id="add-news">
               <i class="fa fa-plus-circle"></i> Add News
             </button>
         </form>
@@ -157,58 +152,13 @@
                 <th scope="col" class="titles colors">Action</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">
-                        <img src="images/logo.jpg" height="40px" alt="image">
-                    </th>
-                    <td class="color-light"><p>Hi checkout</p></td>
-                    <td>
-                      <p class="color-light">
-                        Hello there checkout the impossible archivements 
-                        made by Mbale People's Clinic and Martenate Home.
-                      </p>
-                    </td>
-                    <td>
-                      <span><i class="btn-icon fa fa-edit" style="color:blue"></i> | <i style="color: red" class="btn-icon fa fa-trash"></i></span>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">
-                        <img src="images/logo.jpg" height="40px" alt="image">
-                    </th>
-                    <td class="color-light"><p>Hi checkout</p></td>
-                    <td>
-                      <p class="color-light">
-                        Hello there checkout the impossible archivements 
-                        made by Mbale People's Clinic and Martenate Home.
-                      </p>
-                    </td>
-                    <td>
-                      <span><i class="btn-icon fa fa-edit" style="color:blue"></i> | <i style="color: red" class="btn-icon fa fa-trash"></i></span>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">
-                        <img src="images/logo.jpg" height="40px" alt="image">
-                    </th>
-                    <td class="color-light"><p>Hi checkout</p></td>
-                    <td>
-                      <p class="color-light">
-                        Hello there checkout the impossible archivements 
-                        made by Mbale People's Clinic and Martenate Home.
-                      </p>
-                    </td>
-                    <td>
-                      <span><i class="btn-icon fa fa-edit" style="color:blue"></i> | <i style="color: red" class="btn-icon fa fa-trash"></i></span>
-                    </td>
-                </tr>
-            </tbody>
+            {{-- fetch news from jQuery --}}
+            <tbody class="news-tbody"></tbody>
         </table>
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-outline-secondary btn-sm" data-dismiss="modal">Done</button>
+        <button type="button" class="btn btn-outline-secondary btn-sm done" data-dismiss="modal">Done</button>
       </div>
     </div>
   </div>
@@ -220,9 +170,6 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title colors" id="exampleModalLongTitle">Add Staff to the Website</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
       </div>
       <div class="modal-body">
         <form id="staff-submition" method="POST" enctype="multipart/form-data">
@@ -248,7 +195,7 @@
                 </div>
             </div>
                 
-            <button type="submit" class="btn btn-outline-primary btn-sm mb-2 add_button">
+            <button type="submit" data="save" class="btn btn-outline-primary btn-sm mb-2 add_button done" id="add-staff">
               <i class="fa fa-plus-circle"></i> Add Staff Member
             </button>
         </form>
@@ -261,50 +208,9 @@
                 <th scope="col" class="titles colors">Action</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">
-                        <img src="images/logo.jpg" height="40px" alt="image">
-                    </th>
-                    <td class="color-light"><p>Bryan Austin</p></td>
-                    <td>
-                      <p class="color-light">
-                        Surgion
-                      </p>
-                    </td>
-                    <td>
-                      <span><i class="btn-icon fa fa-edit" style="color:blue"></i> | <i style="color: red" class="btn-icon fa fa-trash"></i></span>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">
-                        <img src="images/logo.jpg" height="40px" alt="image">
-                    </th>
-                    <td class="color-light"><p>Bryan Austin</p></td>
-                    <td>
-                      <p class="color-light">
-                        Surgion
-                      </p>
-                    </td>
-                    <td>
-                      <span><i class="btn-icon fa fa-edit" style="color:blue"></i> | <i style="color: red" class="btn-icon fa fa-trash"></i></span>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">
-                        <img src="images/logo.jpg" height="40px" alt="image">
-                    </th>
-                    <td class="color-light"><p>Bryan Austin</p></td>
-                    <td>
-                      <p class="color-light">
-                        Surgion
-                      </p>
-                    </td>
-                    <td>
-                      <span><i class="btn-icon fa fa-edit" style="color:blue"></i> | <i style="color: red" class="btn-icon fa fa-trash"></i></span>
-                    </td>
-                </tr>
-            </tbody>
+
+            {{-- Staff is rendered from jQuery --}}
+            <tbody class="staff-tbody"></tbody>
         </table>
 
       </div>

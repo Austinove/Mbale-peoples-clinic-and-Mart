@@ -18,7 +18,7 @@ class StaffController extends Controller
      */
     public function index()
     {
-        //
+        return response()->json(Staff::all());
     }
 
     /**
@@ -61,7 +61,7 @@ class StaffController extends Controller
             try {
                 $user->staffs()->save($staff);
                 return response()->json([
-                    "msg" => "staff saved Successfully"
+                    "msg" => "Staff saved Successfully"
                 ]);
             } catch (QueryException $th) {
                 throw $th->getMessage();
@@ -104,7 +104,48 @@ class StaffController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            "staff-name" => "required",
+            "staff-dept" => "required"
+        ]);
+
+        $user = User::findOrFail(Auth::user()->id);
+
+        if ($request->hasFile('staff-image') && $request->file('staff-image') instanceof UploadedFile) {
+            $this->validate($request, [
+                "staff-image" => "required|image|max:2000|mimes:jpeg,png,jpg",
+            ]);
+            
+            $filenameWithExt = $request->file("staff-image")->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file("staff-image")->getClientOriginalExtension();
+            $fileNameToStore = $filename . "_" . time() . "." . $extension;
+            $path = $request->file("staff-image")->storeAs("public/staff", $fileNameToStore);
+            
+            try {
+                $user->staffs()->whereId($id)->update([
+                    'name' => $request->input("staff-name"),
+                    'image' => $fileNameToStore,
+                    'department' => $request->input("staff-dept")
+                ]);
+                return response()->json([
+                    "msg" => "Staff saved Successfully"
+                ]);
+            } catch (QueryException $th) {
+                throw $th->getMessage();
+            }
+        }
+        try {
+            $user->staffs()->whereId($id)->update([
+                'name' => $request->input("staff-name"),
+                'department' => $request->input("staff-dept")
+            ]);
+            return response()->json([
+                "msg" => "Staff saved Successfully"
+            ]);
+        } catch (QueryException $th) {
+            throw $th->getMessage();
+        }
     }
 
     /**
@@ -115,6 +156,14 @@ class StaffController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::findOrFail(Auth::user()->id);
+        try {
+            $user->staffs()->whereId($id)->delete();
+            return response()->json([
+                "msg" => "Staff deleted"
+            ]);
+        } catch (QueryException $th) {
+            throw $th->getMessage();
+        }
     }
 }

@@ -28,11 +28,20 @@ Route::get('contactus', function(){
 Auth::routes();
 Route::get('/', 'HomeController@index')->name('dashboard');
 Route::get('/home', 'HomeController@index')->name('home');
+
 Route::post('/appointment/create', 'AppointmentsController@store')->name('appointmentCreate');
+
 Route::post('/create/slide', 'SlidesController@store')->name('slidesCreate');
 Route::get('/getSlides', 'SlidesController@index')->name('fetchSlides');
 Route::post('/edit/slide/{id}', 'SlidesController@update')->name('updateSlide');
 Route::delete('/delete/slide/{id}', 'SlidesController@destroy')->name('deleteSlide');
+
 Route::post('/create/news', 'NewsController@store')->name('newsCreate');
-Route::post('/getNews', 'NewsController@index')->name('fetchNews');
+Route::get('/getNews', 'NewsController@index')->name('fetchNews');
+Route::post('/edit/news/{id}', 'NewsController@update')->name('updatNews');
+Route::delete('/delete/news/{id}', 'NewsController@destroy')->name('deleteNews');
+
 Route::post('/create/staff', 'StaffController@store')->name('staffCreate');
+Route::get('/getStaff', 'StaffController@index')->name('fetchStaff');
+Route::post('/edit/staff/{id}', 'StaffController@update')->name('updateStaff');
+Route::delete('/delete/staff/{id}', 'StaffController@destroy')->name('deleteStaff');

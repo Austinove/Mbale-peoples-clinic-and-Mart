@@ -18,7 +18,7 @@ class NewsController extends Controller
      */
     public function index()
     {
-        //
+        return response()->json(News::all());
     }
 
     /**
@@ -103,7 +103,48 @@ class NewsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            "news-title" => "required",
+            "news-desc" => "required"
+        ]);
+
+        $user = User::findOrFail(Auth::user()->id);
+
+        if ($request->hasFile('news-image') && $request->file('news-image') instanceof UploadedFile) {
+            $this->validate($request, [
+                "news-image" => "required|image|max:2000|mimes:jpeg,png,jpg",
+            ]);
+
+            $filenameWithExt = $request->file("news-image")->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file("news-image")->getClientOriginalExtension();
+            $fileNameToStore = $filename . "_" . time() . "." . $extension;
+            $path = $request->file("news-image")->storeAs("public/news", $fileNameToStore);
+            
+            try {
+                $user->news()->whereId($id)->update([
+                    'title' => $request->input("news-title"),
+                    'image' => $fileNameToStore,
+                    'description' => $request->input("news-desc")
+                ]);
+                return response()->json([
+                    "msg" => "News saved Successfully"
+                ]);
+            } catch (QueryException $th) {
+                throw $th->getMessage();
+            }
+        }
+        try {
+            $user->news()->whereId($id)->update([
+                'title' => $request->input("news-title"),
+                'description' => $request->input("news-desc")
+            ]);
+            return response()->json([
+                "msg" => "News saved Successfully"
+            ]);
+        } catch (QueryException $th) {
+            throw $th->getMessage();
+        }
     }
 
     /**
@@ -114,6 +155,14 @@ class NewsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::findOrFail(Auth::user()->id);
+        try {
+            $user->news()->whereId($id)->delete();
+            return response()->json([
+                "msg" => "News deleted"
+            ]);
+        } catch (QueryException $th) {
+            throw $th->getMessage();
+        }
     }
 }
