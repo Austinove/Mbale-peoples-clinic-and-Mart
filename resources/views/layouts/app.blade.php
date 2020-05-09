@@ -55,19 +55,38 @@
         });
 
         $(document).ready(function(e){
+            //disable modal alerts
+            $(".modal-alert-success").hide();
+            $('.modal-alert-danger').hide();
 
 //--------------------Appointments Actions------------------------------------
             // e.preventDefault();
             $('#appointment-request').click(function() {
-                $(this).prop("disabled", true);
+                // $(this).prop("disabled", true);
                 $.ajax({
                     url: 'appointment/create',
                     type: 'post',
                     data: $('#ajax_class_form').serialize(),
                     success: function(response){
-                        console.log(response);
+                        if(response.msg === 'Appointment Sent'){
+                            $(".modal-alert-success").fadeTo(4000,500).slideUp(500, function(){
+                                $(".modal-alert-success").slideUp(500);
+                            });
+                        }else{
+                            $(".modal-alert-danger").fadeTo(7000,500).slideUp(500, function(){
+                                $(".modal-alert-danger").slideUp(500);
+                            });
+                        }
+                        clearInputs();
+                    },
+                    error: function(error){
+                        console.log(error);
+                        $(".modal-alert-danger").fadeTo(7000,500).slideUp(500, function(){
+                            $(".modal-alert-danger").slideUp(500);
+                        });
                     }
                 });
+                $(this).prop("disabled", false);
             });
 
 //-----------------------------------Slides Actions----------------------------------
@@ -82,7 +101,10 @@
                     dataType: 'json',
                     success: (res) => {
                         return res;
-                        console.log(res);
+                    },
+                    error: (error) => {
+                        console.log(error);
+                        return error;
                     }
                 });
             }
@@ -95,12 +117,20 @@
                     dataType: 'json',
                     sucess: (res) => {
                         return res;
-                        console.log(res);
+                    },
+                    error: (error) => {
+                        console.log(error);
+                        return error
                     }
                 });
             }
             //Empting inputs
             function clearInputs(){
+                $('#appointment-name').val('');
+                $('#appointment-number').val('');
+                $('#appointment-date').val('');
+                $('#appointment-sms').val('');
+
                 $('#slides-title').val('');
                 $('#slides-desc').val('');
                 $('#slides-image').val('');
@@ -132,11 +162,24 @@
                     processData: false,
                     success: function(response){
                         if(response.msg === "Slide saved Successfully"){
+                            $(".modal-alert-success").fadeTo(4000,500).slideUp(500, function(){
+                                $(".modal-alert-success").slideUp(500);
+                            });
                             clearInputs();
                             $('#add-slide').html('<i class="fa fa-plus-circle"></i> Add Slide');
                             $('#add-slide').attr('data', 'save');
                             renderSlides();
+                        } else {
+                            $(".modal-alert-danger").fadeTo(7000,500).slideUp(500, function(){
+                                $(".modal-alert-danger").slideUp(500);
+                            });
                         }
+                    },
+                    error: function(error) {
+                        console.log(error);
+                        $(".modal-alert-danger").fadeTo(7000,500).slideUp(500, function(){
+                            $(".modal-alert-danger").slideUp(500);
+                        });
                     }
                     
                 });
@@ -155,7 +198,14 @@
                 url = `delete/slide/${id}`;
                 $.when(deleteRequest(url).done(response => {
                     if(response.msg === "Slide deleted"){
+                        $(".modal-alert-success").fadeTo(4000,500).slideUp(500, function(){
+                            $(".modal-alert-success").slideUp(500);
+                        });
                         renderSlides();
+                    }else{
+                        $(".modal-alert-danger").fadeTo(7000,500).slideUp(500, function(){
+                            $(".modal-alert-danger").slideUp(500);
+                        });
                     }
                 }));
             });
@@ -216,12 +266,24 @@
                     processData: false,
                     success: function(response){
                         if (response.msg === "News saved Successfully") {
-                            console.log(response);
+                            $(".modal-alert-success").fadeTo(5000,500).slideUp(500, function(){
+                                $(".modal-alert-success").slideUp(500);
+                            });
                             clearInputs();
                             $('#add-news').html('<i class="fa fa-plus-circle"></i> Add News');
                             $('#add-news').attr('data', 'save');
                             renderNews();
+                        } else {
+                            $(".modal-alert-danger").fadeTo(7000,500).slideUp(500, function(){
+                                $(".modal-alert-danger").slideUp(500);
+                            });
                         }
+                    },
+                    error: function(error){
+                        console.log(error);
+                        $(".modal-alert-danger").fadeTo(7000,500).slideUp(500, function(){
+                            $(".modal-alert-danger").slideUp(500);
+                        });
                     }
                 });
             });
@@ -237,9 +299,21 @@
             $(document).on("click", ".delete-news", function(){
                 var id = $(this).attr('data');
                 url = `delete/news/${id}`;
-                $.when(deleteRequest(url).done(response => {
+                $.when(deleteRequest(url).done((response, error) => {
                     if(response.msg === "News deleted"){
+                        $(".modal-alert-success").fadeTo(4000,500).slideUp(500, function(){
+                            $(".modal-alert-success").slideUp(500);
+                        });
                         renderNews();
+                    }else{
+                        $(".modal-alert-danger").fadeTo(7000,500).slideUp(500, function(){
+                            $(".modal-alert-danger").slideUp(500);
+                        });
+                    }
+                    if(error){
+                        $(".modal-alert-danger").fadeTo(7000,500).slideUp(500, function(){
+                            $(".modal-alert-danger").slideUp(500);
+                        });
                     }
                 }));
             });
@@ -325,11 +399,24 @@
                     processData: false,
                     success: function(response){
                         if(response.msg === "Staff saved Successfully"){
+                            $(".modal-alert-success").fadeTo(4000,500).slideUp(500, function(){
+                                $(".modal-alert-success").slideUp(500);
+                            });
                             clearInputs();
                             $('#add-staff').html('<i class="fa fa-plus-circle"></i> Add Staff Member');
                             $('#add-staff').attr('data', 'save');
                             renderStaff();
+                        }else{
+                            $(".modal-alert-danger").fadeTo(7000,500).slideUp(500, function(){
+                                $(".modal-alert-danger").slideUp(500);
+                            });
                         }
+                    },
+                    error: function(error){
+                        console.log(error);
+                        $(".modal-alert-danger").fadeTo(7000,500).slideUp(500, function(){
+                            $(".modal-alert-danger").slideUp(500);
+                        });
                     }
                 });
             });
@@ -347,7 +434,14 @@
                 url = `delete/staff/${id}`;
                 $.when(deleteRequest(url).done(response => {
                     if(response.msg === "Staff deleted"){
+                        $(".modal-alert-success").fadeTo(4000,500).slideUp(500, function(){
+                            $(".modal-alert-success").slideUp(500);
+                        });
                         renderStaff();
+                    } else {
+                        $(".modal-alert-danger").fadeTo(7000,500).slideUp(500, function(){
+                            $(".modal-alert-danger").slideUp(500);
+                        });
                     }
                 }));
             });

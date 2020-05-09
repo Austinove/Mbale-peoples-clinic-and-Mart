@@ -51,3 +51,9 @@
     left: 35px;
     bottom: 20px;
 }
+.alert-dismissible .close {
+    font-size: 15px;
+}
+.alert {
+    font-size: 12px;
+}

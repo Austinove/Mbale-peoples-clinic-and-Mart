@@ -41,8 +41,20 @@
             </div>
         </form>
       </div>
+      <div class="alert modal-alert-success alert-success alert-dismissible fade show" role="alert">
+        <strong>Appointment Send</strong> We will Call You for More Detalis
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="alert modal-alert-danger alert-danger alert-dismissible fade show" role="alert">
+        <strong>An Error Occured !</strong> Try again later please.....
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-outline-secondary done" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-outline-primary add_button" id="appointment-request">Request</button>
       </div>
     </div>
@@ -79,7 +91,18 @@
                   </div>
                 </div>
             </div>
-                
+            <div class="alert modal-alert-success alert-success alert-dismissible fade show" role="alert">
+              <strong>Slide Saved Successfully</strong> Press Apply Changes....
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="alert modal-alert-danger alert-danger alert-dismissible fade show" role="alert">
+              <strong>An Error Occured !</strong> Try again later please.....
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
             <button type="submit" data="save" class="btn btn-outline-primary btn-sm mb-2 add_button" id="add-slide">
               <i class="fa fa-plus-circle"></i> Add Slide
             </button>
@@ -99,7 +122,7 @@
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-outline-secondary done" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-secondary btn-sm add_button" data-dismiss="modal" id="applySlides">Apply Slides</button>
       </div>
     </div>
@@ -138,7 +161,18 @@
                   </div>
                 </div>
             </div>
-                
+            <div class="alert modal-alert-success alert-success alert-dismissible fade show" role="alert">
+              <strong>News Added Successfully</strong> Thank you...
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="alert modal-alert-danger alert-danger alert-dismissible fade show" role="alert">
+              <strong>An Error Occured !</strong> Try again later please.....
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
             <button type="submit" data="save" class="btn btn-outline-primary btn-sm mb-2 add_button" id="add-news">
               <i class="fa fa-plus-circle"></i> Add News
             </button>
@@ -194,7 +228,18 @@
                     </div>
                 </div>
             </div>
-                
+            <div class="alert modal-alert-success alert-success alert-dismissible fade show" role="alert">
+              <strong>Staff Added Successfully</strong> Thank you...
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="alert modal-alert-danger alert-danger alert-dismissible fade show" role="alert">
+              <strong>An Error Occured !</strong> Try again later please.....
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
             <button type="submit" data="save" class="btn btn-outline-primary btn-sm mb-2 add_button done" id="add-staff">
               <i class="fa fa-plus-circle"></i> Add Staff Member
             </button>
