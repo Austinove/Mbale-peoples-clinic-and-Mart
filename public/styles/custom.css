@@ -1,6 +1,6 @@
-.form-group > .form-custom{
-    font-size: 12px;
-    border-color: #d6cdd6;
+.form-group > .form-custom, .form-custom{
+    font-size: 12px !important;
+    border-color: #d6cdd6 !important;
 }
 .footer_about_text > h3, h4 {
     color: white;
@@ -56,4 +56,8 @@
 }
 .alert {
     font-size: 12px;
+}
+.card-header-custom{
+    background-color: #350d36 !important;
+    color: white !important;
 }

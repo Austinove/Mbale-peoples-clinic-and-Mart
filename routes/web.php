@@ -28,6 +28,8 @@ Route::get('contactus', function(){
 Auth::routes();
 Route::get('/', 'HomeController@index')->name('dashboard');
 Route::get('/home', 'HomeController@index')->name('home');
+Route::post("/reset_password", "AccountsController@validatePassword")->name("requestPassword");
+Route::post("/reset_password_with_token", "AccountsController@resetPassword");
 
 Route::post('/appointment/create', 'AppointmentsController@store')->name('appointmentCreate');
 

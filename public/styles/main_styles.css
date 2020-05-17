@@ -1099,7 +1099,7 @@ contacts css fixes
 }
 .dept_button a, .colors
 {
-	color: #350d36;
+	color: #350d36 !important;
 }
 .color-light{
 	color: #8c578d !important;

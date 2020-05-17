@@ -59,6 +59,19 @@
             $(".modal-alert-success").hide();
             $('.modal-alert-danger').hide();
 
+            function notifier(alertType){
+                if(alertType === "error"){
+                    $(".modal-alert-danger").fadeTo(7000,500).slideUp(500, function(){
+                        $(".modal-alert-danger").slideUp(500);
+                    });
+                }else{
+                    $(".modal-alert-success").fadeTo(4000,500).slideUp(500, function(){
+                        $(".modal-alert-success").slideUp(500);
+                    });
+                }
+                return true
+            }
+
 //--------------------Appointments Actions------------------------------------
             // e.preventDefault();
             $('#appointment-request').click(function() {
@@ -66,27 +79,20 @@
                 $.ajax({
                     url: 'appointment/create',
                     type: 'post',
-                    data: $('#ajax_class_form').serialize(),
-                    success: function(response){
-                        if(response.msg === 'Appointment Sent'){
-                            $(".modal-alert-success").fadeTo(4000,500).slideUp(500, function(){
-                                $(".modal-alert-success").slideUp(500);
-                            });
-                        }else{
-                            $(".modal-alert-danger").fadeTo(7000,500).slideUp(500, function(){
-                                $(".modal-alert-danger").slideUp(500);
-                            });
-                        }
-                        clearInputs();
-                    },
-                    error: function(error){
-                        console.log(error);
-                        $(".modal-alert-danger").fadeTo(7000,500).slideUp(500, function(){
-                            $(".modal-alert-danger").slideUp(500);
-                        });
+                    data: $('#ajax_class_form').serialize()
+                })
+                .done(response => {
+                    if(response.msg === 'Appointment Sent'){
+                        notifier('success');
+                    }else{
+                        notifier('error');
                     }
+                    clearInputs();
+                })
+                .fail(error => {
+                    console.log(error);
+                    notifier('error');
                 });
-                $(this).prop("disabled", false);
             });
 
 //-----------------------------------Slides Actions----------------------------------
@@ -98,14 +104,7 @@
                 return $.ajax({
                     url:url,
                     type: "get",
-                    dataType: 'json',
-                    success: (res) => {
-                        return res;
-                    },
-                    error: (error) => {
-                        console.log(error);
-                        return error;
-                    }
+                    dataType: 'json'
                 });
             }
             //delete request function
@@ -114,14 +113,7 @@
                     url:url,
                     type: 'delete',
                     data: {_token: "{{ csrf_token() }}"},
-                    dataType: 'json',
-                    sucess: (res) => {
-                        return res;
-                    },
-                    error: (error) => {
-                        console.log(error);
-                        return error
-                    }
+                    dataType: 'json'
                 });
             }
             //Empting inputs
@@ -160,28 +152,21 @@
                     contentType: false,
                     cache: false,
                     processData: false,
-                    success: function(response){
-                        if(response.msg === "Slide saved Successfully"){
-                            $(".modal-alert-success").fadeTo(4000,500).slideUp(500, function(){
-                                $(".modal-alert-success").slideUp(500);
-                            });
-                            clearInputs();
-                            $('#add-slide').html('<i class="fa fa-plus-circle"></i> Add Slide');
-                            $('#add-slide').attr('data', 'save');
-                            renderSlides();
-                        } else {
-                            $(".modal-alert-danger").fadeTo(7000,500).slideUp(500, function(){
-                                $(".modal-alert-danger").slideUp(500);
-                            });
-                        }
-                    },
-                    error: function(error) {
-                        console.log(error);
-                        $(".modal-alert-danger").fadeTo(7000,500).slideUp(500, function(){
-                            $(".modal-alert-danger").slideUp(500);
-                        });
+                })
+                .done(response => {
+                    if(response.msg === "Slide saved Successfully"){
+                        notifier('success');
+                        clearInputs();
+                        $('#add-slide').html('<i class="fa fa-plus-circle"></i> Add Slide');
+                        $('#add-slide').attr('data', 'save');
+                        renderSlides();
+                    } else {
+                        notifier('error');
                     }
-                    
+                })
+                .fail(error => {
+                    console.log(error);
+                    notifier('error');
                 });
             });
             //Editing Slide
@@ -198,15 +183,15 @@
                 url = `delete/slide/${id}`;
                 $.when(deleteRequest(url).done(response => {
                     if(response.msg === "Slide deleted"){
-                        $(".modal-alert-success").fadeTo(4000,500).slideUp(500, function(){
-                            $(".modal-alert-success").slideUp(500);
-                        });
+                        notifier('success');
                         renderSlides();
                     }else{
-                        $(".modal-alert-danger").fadeTo(7000,500).slideUp(500, function(){
-                            $(".modal-alert-danger").slideUp(500);
-                        });
+                        notifier('error');
                     }
+                })
+                .fail(error => {
+                    console.log(error);
+                    notifier('error');
                 }));
             });
             //Rendering Slides;
@@ -238,6 +223,9 @@
                             </tr>
                         `);
                     });
+                }).fail(error => {
+                    console.log(error);
+                    notifier('error');
                 }));
             }
             renderSlides();
@@ -263,28 +251,22 @@
                     dataType: "json",
                     contentType: false,
                     cache: false,
-                    processData: false,
-                    success: function(response){
-                        if (response.msg === "News saved Successfully") {
-                            $(".modal-alert-success").fadeTo(5000,500).slideUp(500, function(){
-                                $(".modal-alert-success").slideUp(500);
-                            });
-                            clearInputs();
-                            $('#add-news').html('<i class="fa fa-plus-circle"></i> Add News');
-                            $('#add-news').attr('data', 'save');
-                            renderNews();
-                        } else {
-                            $(".modal-alert-danger").fadeTo(7000,500).slideUp(500, function(){
-                                $(".modal-alert-danger").slideUp(500);
-                            });
-                        }
-                    },
-                    error: function(error){
-                        console.log(error);
-                        $(".modal-alert-danger").fadeTo(7000,500).slideUp(500, function(){
-                            $(".modal-alert-danger").slideUp(500);
-                        });
+                    processData: false
+                })
+                .done(response => {
+                    if (response.msg === "News saved Successfully") {
+                        notifier('success');
+                        clearInputs();
+                        $('#add-news').html('<i class="fa fa-plus-circle"></i> Add News');
+                        $('#add-news').attr('data', 'save');
+                        renderNews();
+                    } else {
+                        notifier('error');
                     }
+                })
+                .fail(error => {
+                    console.log(error);
+                    notifier('error');
                 });
             });
             //Editing News
@@ -299,22 +281,16 @@
             $(document).on("click", ".delete-news", function(){
                 var id = $(this).attr('data');
                 url = `delete/news/${id}`;
-                $.when(deleteRequest(url).done((response, error) => {
+                $.when(deleteRequest(url).done(response => {
                     if(response.msg === "News deleted"){
-                        $(".modal-alert-success").fadeTo(4000,500).slideUp(500, function(){
-                            $(".modal-alert-success").slideUp(500);
-                        });
+                        notifier('success');
                         renderNews();
                     }else{
-                        $(".modal-alert-danger").fadeTo(7000,500).slideUp(500, function(){
-                            $(".modal-alert-danger").slideUp(500);
-                        });
+                        notifier('error');
                     }
-                    if(error){
-                        $(".modal-alert-danger").fadeTo(7000,500).slideUp(500, function(){
-                            $(".modal-alert-danger").slideUp(500);
-                        });
-                    }
+                }).fail(error => {
+                    console.log(error);
+                    notifier('error');
                 }));
             });
             // Rendering News
@@ -378,6 +354,9 @@
                             </div>
                         `)
                     });
+                }).fail(error => {
+                    console.log(error);
+                    notifier('error')
                 }));
             }
 
@@ -396,28 +375,22 @@
                     data: new FormData(this),
                     contentType:false,
                     cache: false,
-                    processData: false,
-                    success: function(response){
-                        if(response.msg === "Staff saved Successfully"){
-                            $(".modal-alert-success").fadeTo(4000,500).slideUp(500, function(){
-                                $(".modal-alert-success").slideUp(500);
-                            });
-                            clearInputs();
-                            $('#add-staff').html('<i class="fa fa-plus-circle"></i> Add Staff Member');
-                            $('#add-staff').attr('data', 'save');
-                            renderStaff();
-                        }else{
-                            $(".modal-alert-danger").fadeTo(7000,500).slideUp(500, function(){
-                                $(".modal-alert-danger").slideUp(500);
-                            });
-                        }
-                    },
-                    error: function(error){
-                        console.log(error);
-                        $(".modal-alert-danger").fadeTo(7000,500).slideUp(500, function(){
-                            $(".modal-alert-danger").slideUp(500);
-                        });
+                    processData: false
+                })
+                .done(response => {
+                    if(response.msg === "Staff saved Successfully"){
+                        notifier('success');
+                        clearInputs();
+                        $('#add-staff').html('<i class="fa fa-plus-circle"></i> Add Staff Member');
+                        $('#add-staff').attr('data', 'save');
+                        renderStaff();
+                    }else{
+                        notifier('error');
                     }
+                })
+                .fail(error => {
+                    console.log(error);
+                    notifier('error');
                 });
             });
             //Editing Staff
@@ -434,15 +407,14 @@
                 url = `delete/staff/${id}`;
                 $.when(deleteRequest(url).done(response => {
                     if(response.msg === "Staff deleted"){
-                        $(".modal-alert-success").fadeTo(4000,500).slideUp(500, function(){
-                            $(".modal-alert-success").slideUp(500);
-                        });
+                        notifier('success')
                         renderStaff();
                     } else {
-                        $(".modal-alert-danger").fadeTo(7000,500).slideUp(500, function(){
-                            $(".modal-alert-danger").slideUp(500);
-                        });
+                        notifier('error')
                     }
+                }).fail(error => {
+                    console.log(error);
+                    notifier('error');
                 }));
             });
             //Rendering Staff
@@ -487,6 +459,9 @@
                         </div>
                         `);
                     });
+                }).fail(error => {
+                    console.log(error);
+                    notifier('error');
                 }));
             }
         });
