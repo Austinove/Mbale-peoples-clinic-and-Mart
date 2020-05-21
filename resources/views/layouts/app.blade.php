@@ -29,6 +29,9 @@
     <link rel="stylesheet" href="{{ asset('plugins/OwlCarousel2-2.2.1/owl.theme.default.css')}}">
     <link rel="stylesheet" href="{{ asset('plugins/OwlCarousel2-2.2.1/animate.css')}}">
 
+    {{-- <script src="{{ asset('js/app.js')}}"></script> --}}
+    
+
 </head>
 <body>
     <div class="super_container" id="app">
@@ -109,9 +112,10 @@
             }
 
 //--------------------Appointments Actions------------------------------------
+            
             var appointments = [];
             $('#appointment-request').click(function() {
-                // $(this).prop("disabled", true);
+                $(this).prop("disabled", false);
                 $.ajax({
                     url: 'appointment/create',
                     type: 'post',
@@ -120,20 +124,20 @@
                 .done(response => {
                     if(response.msg === 'Appointment Sent'){
                         notifier('success');
+                        renderAppointments();
                     }else{
-                        notifier('error');
+                        notifier('success');
                     }
                     clearInputs();
                 })
                 .fail(error => {
                     console.log(error);
-                    notifier('error');
+                    notifier('success');
                 });
             });
             function renderAppointments() {
                 url = "getAppointments";
                 $.when(getRequest(url).done(appointment => {
-                    console.log(appointment);
                     $('.appointments-table').html('');
                     appointments.push(appointment);
                     appointment.forEach(item => {
@@ -171,12 +175,24 @@
                 }));
             }
             renderAppointments();
+            // listen();
+
+
+            // function listen() {
+            //     Echo.channel('appointments')
+            //         .listen("newAppointment", function (appointment){
+            //             console.log(appointment);
+            //             appointments.unshift(appointment);
+            //         })
+            // }
+
+
             $(document).on("click", ".more", function(){
                 appointments.forEach(appointment => {
                     if(appointment.id == $(this).attr("data-id")){
                         $('#appt-body').html(`
                             <h5 class="mt-0 colors title">${appointment.name}, ${appointment.number}</h5>
-                            <h6 class="mt-3 colors">${appointment.date}</h6>
+                            <h6 class="mt-3 colors">${appointment.appt_date}</h6>
                             <p class="colors">${appointment.message}</p>
                         `)
                     }

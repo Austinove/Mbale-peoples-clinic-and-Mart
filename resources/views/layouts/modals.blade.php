@@ -55,7 +55,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-outline-secondary done" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-outline-primary add_button" id="appointment-request">Request</button>
+        <button type="submit" class="btn btn-outline-primary add_button" id="appointment-request">Request</button>
       </div>
     </div>
   </div>

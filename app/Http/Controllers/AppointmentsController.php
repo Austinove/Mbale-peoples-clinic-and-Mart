@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Appointment;
+use App\Events\NewAppointment;
 use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -29,10 +30,21 @@ class AppointmentsController extends Controller
             $appointment = new Appointment([
                 'name' => $request['appointment-name'],
                 'number' => $request['appointment-number'],
-                'date' => $request['appointment-date'],
-                'message' => $request['appointment-sms']
+                'appt_date' => $request['appointment-date'],
+                'message' => $request['appointment-sms'],
+                'view' => 0
             ]);
             $appointment->save();
+            $newappt = Appointment::where(
+                array(
+                    'name' => $request['appointment-name'],
+                    'number' => $request['appointment-number'],
+                    'appt_date' => $request['appointment-date'],
+                    'message' => $request['appointment-sms'],
+                    'view' => 0
+                )
+            )->first();
+            event(new NewAppointment($newappt));
             return response()->json([
                 'msg' => 'Appointment Sent'
             ]);

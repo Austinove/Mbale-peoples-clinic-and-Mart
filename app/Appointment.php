@@ -9,7 +9,7 @@ class Appointment extends Model
     protected $fillable = [
         'name',
         'number',
-        'date',
+        'appt_date',
         'message',
         'view'
     ];
