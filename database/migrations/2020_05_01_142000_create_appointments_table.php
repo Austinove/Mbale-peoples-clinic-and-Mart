@@ -19,6 +19,7 @@ class CreateAppointmentsTable extends Migration
             $table->string('number');
             $table->string('date');
             $table->text('message');
+            $table->string('view');
             $table->timestamps();
         });
     }

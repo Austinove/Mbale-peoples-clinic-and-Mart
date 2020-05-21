@@ -61,6 +61,35 @@
   </div>
 </div>
 
+{{-- Appointment details --}}
+<div class="modal" id="appointment-details" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title colors" id="exampleModalLongTitle">Appointment Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="media">
+          {{-- body in jQuery --}}
+          <div class="media-body appt-body"></div>
+        </div>
+      </div>
+      <div class="alert modal-alert-danger alert-danger alert-dismissible fade show" role="alert">
+        <strong>An Error Occured !</strong> Try again later please.....
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary done add_button" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+  </div>
+</div>
+
 <!-- Add slides -->
 <div class="modal fade" id="slides" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">

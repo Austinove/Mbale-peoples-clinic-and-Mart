@@ -71,34 +71,6 @@
                 }
                 return true
             }
-
-//--------------------Appointments Actions------------------------------------
-            // e.preventDefault();
-            $('#appointment-request').click(function() {
-                // $(this).prop("disabled", true);
-                $.ajax({
-                    url: 'appointment/create',
-                    type: 'post',
-                    data: $('#ajax_class_form').serialize()
-                })
-                .done(response => {
-                    if(response.msg === 'Appointment Sent'){
-                        notifier('success');
-                    }else{
-                        notifier('error');
-                    }
-                    clearInputs();
-                })
-                .fail(error => {
-                    console.log(error);
-                    notifier('error');
-                });
-            });
-
-//-----------------------------------Slides Actions----------------------------------
-            $('#applySlides').click(function(){
-                location.reload(true);
-            });
             //get request function
             function getRequest(url){
                 return $.ajax({
@@ -135,6 +107,87 @@
                 $('#staff-dept').val('');
                 $('#staff-image').val('');
             }
+
+//--------------------Appointments Actions------------------------------------
+            var appointments = [];
+            $('#appointment-request').click(function() {
+                // $(this).prop("disabled", true);
+                $.ajax({
+                    url: 'appointment/create',
+                    type: 'post',
+                    data: $('#ajax_class_form').serialize()
+                })
+                .done(response => {
+                    if(response.msg === 'Appointment Sent'){
+                        notifier('success');
+                    }else{
+                        notifier('error');
+                    }
+                    clearInputs();
+                })
+                .fail(error => {
+                    console.log(error);
+                    notifier('error');
+                });
+            });
+            function renderAppointments() {
+                url = "getAppointments";
+                $.when(getRequest(url).done(appointment => {
+                    console.log(appointment);
+                    $('.appointments-table').html('');
+                    appointments.push(appointment);
+                    appointment.forEach(item => {
+                        item.view == 0 ?
+                            $('.appointments-table').append(`
+                                <tr>
+                                    <td class="colors titles" style="background: #ede4f1;">
+                                        <span>
+                                            <span class="title badge badge-pill badge-success">New</span>
+                                            ${item.name}, ${item.number}
+                                        </span> 
+                                        <span class="float-right">Appointment Requested on ${item.created_at} 
+                                            <a class="more" href="#" data-id=${item.id}>Click for more</a>
+                                        </span>
+                                    </td>
+                                </tr>
+                            `)
+                        :
+                            $('.appointments-table').append(`
+                                <tr>
+                                    <td class="colors" style="font-size: 13px;">
+                                        <span>
+                                            ${item.name}, ${item.number}
+                                        </span> 
+                                        <span class="float-right">Appointment Requested on ${item.created_at}  
+                                            <a class="more" href="#" data-id=${item.id}> Click for more</a>
+                                        </span>
+                                    </td>
+                                </tr>
+                            `)
+                    });
+                }).fail(error => {
+                    console.log(error);
+                    notifier('error');
+                }));
+            }
+            renderAppointments();
+            $(document).on("click", ".more", function(){
+                appointments.forEach(appointment => {
+                    if(appointment.id == $(this).attr("data-id")){
+                        $('#appt-body').html(`
+                            <h5 class="mt-0 colors title">${appointment.name}, ${appointment.number}</h5>
+                            <h6 class="mt-3 colors">${appointment.date}</h6>
+                            <p class="colors">${appointment.message}</p>
+                        `)
+                    }
+                });
+                $('#appointment-details').modal('show');
+            });
+//-----------------------------------Slides Actions----------------------------------
+            $('#applySlides').click(function(){
+                location.reload(true);
+            });
+            
             //slides creation and editing
             $('#slides-submition').submit(function(e){
                 e.preventDefault();

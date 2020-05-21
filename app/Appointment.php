@@ -10,6 +10,7 @@ class Appointment extends Model
         'name',
         'number',
         'date',
-        'message'
+        'message',
+        'view'
     ];
 }

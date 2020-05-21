@@ -31,7 +31,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::post("/reset_password", "AccountsController@validatePassword")->name("requestPassword");
 Route::post("/reset_password_with_token", "AccountsController@resetPassword");
 
+Route::get('/appointments', 'AppointmentsController@index')->name('appointments');
 Route::post('/appointment/create', 'AppointmentsController@store')->name('appointmentCreate');
+Route::get('/getAppointments', 'AppointmentsController@fetchAppointments')->name('fetchAppointments');
 
 Route::post('/create/slide', 'SlidesController@store')->name('slidesCreate');
 Route::get('/getSlides', 'SlidesController@index')->name('fetchSlides');
