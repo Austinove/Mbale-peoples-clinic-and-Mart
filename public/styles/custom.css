@@ -1,0 +1,66 @@
+.form-group > .form-custom, .form-custom{
+    font-size: 12px !important;
+    border-color: #d6cdd6 !important;
+}
+.footer_about_text > h3, h4 {
+    color: white;
+}
+.home_content_inner> .btn-slide {
+    height: 40px;
+}
+.home_content_inner > .btn-slide > a {
+    line-height: 35px;
+    font-size: 12px;
+    font-weight: 500;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.modal-header > .colors {
+    font-size: 14px;
+    font-weight: bold;
+}
+.form-group > label{
+    font-size: 12px;
+}
+.add_button{
+    color: #350d36 !important;
+    border-color: #350d36 !important;
+    background: transparent !important;
+}
+.add_button:hover{
+    color: white !important;
+    background-color: #350d36 !important;
+    cursor: pointer !important;
+}
+.titles{
+    font-size: 13px;
+    font-weight: bold;
+}
+.btn-icon:hover{
+    cursor: pointer;
+}
+.white_color{
+    color: white !important;
+}
+.img_logo{
+    position: relative;
+    top: 20px;
+}
+.logo_desc{
+    position: relative;
+    left: 35px;
+    bottom: 20px;
+}
+.alert-dismissible .close {
+    font-size: 15px;
+}
+.alert {
+    font-size: 12px;
+}
+.card-header-custom{
+    background-color: #350d36 !important;
+    color: white !important;
+}
+.apt-details{
+    margin-top: 50px;
+}
