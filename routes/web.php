@@ -25,7 +25,7 @@ Route::get('contactus', function(){
     return view("pages.contact");
 });
 
-Auth::routes();
+Auth::routes(['register' => false]);
 Route::get('/', 'HomeController@index')->name('dashboard');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post("/reset_password", "AccountsController@validatePassword")->name("requestPassword");

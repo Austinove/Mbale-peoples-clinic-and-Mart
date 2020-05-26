@@ -15,13 +15,13 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="appointment-name" class="col-form-label colors">Name*</label>
-                        <input type="text" class="form-control form-custom input-xs" name="appointment-name" id="appointment-name">
+                        <input autocomplete="off" type="text" class="form-control form-custom input-xs" name="appointment-name" id="appointment-name">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="appointment-number" class="col-form-label colors">Number*</label>
-                        <input type="text" class="form-control form-custom input-xs" name="appointment-number" id="appointment-number">
+                        <input autocomplete="off" type="text" class="form-control form-custom input-xs" name="appointment-number" id="appointment-number">
                     </div>
                 </div>
             </div>
@@ -29,7 +29,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="appointment-date" class="col-form-label colors">When*</label>
-                        <input type="Date" class="form-control form-custom input-xs" name="appointment-date" id="appointment-date">
+                        <input autocomplete="off" type="Date" class="form-control form-custom input-xs" name="appointment-date" id="appointment-date">
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -104,13 +104,13 @@
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="slides-title" class="col-form-label colors">Title*</label>
-                        <input type="text" class="form-control form-custom input-xs" id="slides-title" name="slides-title">
+                        <input autocomplete="off" type="text" class="form-control form-custom input-xs" id="slides-title" name="slides-title">
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="form-group">
                         <label for="recipient-name" class="col-form-label colors">Image*</label>
-                        <input type="file" class="form-control form-custom input-xs" id="slides-image" name="slides-image">
+                        <input autocomplete="off" type="file" class="form-control form-custom input-xs" id="slides-image" name="slides-image">
                     </div>
                 </div>
                 <div class="col-md-5">
@@ -172,7 +172,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="news-title" class="col-form-label colors">News Title*</label>
-                        <input type="text" class="form-control form-custom input-xs" name="news-title" id="news-title">
+                        <input autocomplete="off" type="text" class="form-control form-custom input-xs" name="news-title" id="news-title">
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -241,13 +241,13 @@
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="staff-name" class="col-form-label colors">Name*</label>
-                        <input type="text" class="form-control form-custom input-xs" name="staff-name" id="staff-name">
+                        <input autocomplete="off" type="text" class="form-control form-custom input-xs" name="staff-name" id="staff-name">
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="staff-dept" class="col-form-label colors">Department*</label>
-                        <input type="text" class="form-control form-custom input-xs" name="staff-dept" id="staff-dept">
+                        <input autocomplete="off" type="text" class="form-control form-custom input-xs" name="staff-dept" id="staff-dept">
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -311,7 +311,7 @@
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="recipient-name" class="col-form-label colors">Name*</label>
-                        <input type="text" class="form-control form-custom input-xs" id="recipient-name">
+                        <input autocomplete="off" type="text" class="form-control form-custom input-xs" id="recipient-name">
                     </div>
                 </div>
                 <div class="col-md-4">
